@@ -5,7 +5,7 @@ php_version: "7.4"
 webserver_type: nginx-fpm
 router_http_port: "80"
 router_https_port: "443"
-xdebug_enabled: false
+xdebug_enabled: true
 additional_hostnames: []
 additional_fqdns: []
 mariadb_version: "10.3"
@@ -15,11 +15,19 @@ composer_version: ""
 web_environment: []
 hooks:
   pre-start:
-    - exec-host: "wget https://raw.githubusercontent.com/drud/ddev-contrib/master/docker-compose-services/portainer/docker-compose.portainer.yaml"
-    - exec-host: "mv docker-compose.portainer.yaml .ddev/"
+    # Resolve the extra service files if not exists.
+    - exec-host: "[ ! -f ./.ddev/docker-compose.portainer.yaml ] && wget https://raw.githubusercontent.com/drud/ddev-contrib/master/docker-compose-services/portainer/docker-compose.portainer.yaml && mv docker-compose.portainer.yaml ./.ddev/"
+    - exec-host: "[ ! -f ./.ddev/docker-compose.react.yaml ] && wget https://raw.githubusercontent.com/davidjguru/ddev-contrib/master/docker-compose-services/react/docker-compose.react.yaml && mv docker-compose.react.yaml ./.ddev/"
   post-start:
-    - composer: install
-    - exec: "drush si --site-name=SummerHouse --account-name=admin --account-pass=admin -y"
+    - exec: sudo echo alias ll=\"ls -lhA\" >> ~/.bashrc
+    # Resolve all dependencies by Composer in container.
+    - composer: install 
+    # Install Drupal after start if not installed already.
+    - exec: "(drush status bootstrap | grep -q Successful) || drush site-install --site-name=SummerHouse --account-name=admin --account-pass=admin --db-url=mysql://db:db@db/db -y"
+    - exec: "(drush status bootstrap | grep -q Successful) || drush user-add-role 'administrator' admin)"
+    # Enable all the contrib resources and load config files.
     - exec: "drush en -y admin_toolbar admin_toolbar_tools admin_toolbar_search admin_toolbar_links_access_filter devel devel_generate"
+    - exec: "drush cim -y"
     - exec: "drush cr"
-    - exec-host: "ddev launch" 
+    # Generate an one-time login for admin.
+    - exec-host: xdg-open $(ddev drush uli admin) 
