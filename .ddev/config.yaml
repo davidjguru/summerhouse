@@ -23,9 +23,10 @@ hooks:
     - composer: install 
     # Install Drupal after start if not installed already.
     - exec: "(drush status bootstrap | grep -q Successful) || (drush site-install --site-name=SummerHouse --account-name=admin --account-pass=admin --db-url=mysql://db:db@db/db -y && drush user-add-role 'administrator' admin)"
-    - exec: "drush cim -y" 
     - exec: "drush cr"
     # Generate an one-time login for admin.
     - exec-host: xdg-open $(ddev drush uli admin) 
     # Enable debugging by-default
     - exec-host: "ddev xdebug on"
+  pre-stop:
+    - exec-host: "ddev xdebug off"
