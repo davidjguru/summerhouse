@@ -22,13 +22,14 @@ hooks:
     # Resolve all dependencies by Composer in container.
     - composer: install 
     # Install Drupal after start if not installed already.
-    - exec: "(ddev drush status bootstrap | grep -q Successful) || ddev drush site-install --site-name=SummerHouse --account-name=admin --account-pass=admin --db-url=mysql://db:db@db/db -y"
-    - exec: "(ddev drush status bootstrap | grep -q Successful) || ddev drush cex -y)"
-    - exec: "(ddev drush status bootstrap | grep -q Successful) || ddev drush user-add-role 'administrator' admin)"
+    - exec: "(drush status bootstrap | grep -q Successful) || drush site-install --site-name=SummerHouse --account-name=admin --account-pass=admin --db-url=mysql://db:db@db/db -y"
+    - exec: "(drush status bootstrap | grep -q Successful) || drush cex -y)"
+    - exec: "(drush status bootstrap | grep -q Successful) || drush user-add-role 'administrator' admin)"
     # Enable all the contrib resources and load config files.
-    - exec: "(ddev drush status bootstrap | grep -q Successful) || ddev drush en -y admin_toolbar admin_toolbar_tools admin_toolbar_search admin_toolbar_links_access_filter devel devel_generate"
-    - exec: "(ddev drush status bootstrap | grep -q Successful) || ddev drush cim -y"
-    - exec: "(ddev drush status bootstrap | grep -q Successful) || ddev drush cr"
-    - exec: "ddev xdebug on"
+    - exec: "(drush status bootstrap | grep -q Successful) || drush en -y admin_toolbar admin_toolbar_tools admin_toolbar_search admin_toolbar_links_access_filter devel devel_generate"
+    - exec: "(drush status bootstrap | grep -q Successful) || drush cim -y"
+    - exec: "(drush status bootstrap | grep -q Successful) || drush cr"
+    # Enable debugging by-default
+    - exec-host: "ddev xdebug on"
     # Generate an one-time login for admin.
     - exec-host: xdg-open $(ddev drush uli admin) 
