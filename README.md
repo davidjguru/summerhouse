@@ -1,7 +1,12 @@
-# Summer House 
+# Welcome to Summer House!  
 
-Summer House is sandbox for Drupal Decoupled projects.  
-This was created to facilitate on-boarding processes in headless projects of complex architectures, as a starting material to test all the most important aspects of this type of installations. But remember: **It should only be used for training purposes in local development environments**.  
+Summer House is a sandbox for Drupal Decoupled projects.
+
+| ![Picture from Unsplash, by @tierramallorca](./images/davidjguru_decoupled_drupal_sandbox_summerhouse.jpeg) |
+| :-------------------------------------------------------------------------------------------------------------------: |
+|              *Picture from Unsplash, user [Tierra Mallorca, @tierramallorca](https://unsplash.com/@tierramallorca)*    
+  
+This project / platform / repository was created to facilitate on-boarding processes in headless projects of complex architectures, as a starting material to test all the most important aspects of this type of installations. But remember: **It should only be used for training purposes in local development environments**.  
 
 Through the installation and management of Summer House, you will be able to play and practice with a series of topics related to web development in general and Drupal in particular, performing tasks related to different parts of "Full Stack" development:  
 
