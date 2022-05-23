@@ -1,45 +1,45 @@
 {
-    "name": "drupal/recommended-project",
-    "description": "Project template for Drupal 9 projects with a relocated document root",
+    "name": "davidjguru/summerhouse",
+    "description": "Summer House is a sandbox for Drupal Decoupled projects.",
     "type": "project",
     "license": "GPL-2.0-or-later",
-    "homepage": "https://www.drupal.org/project/drupal",
+    "homepage": "https://github.com/davidjguru/summerhouse",
     "support": {
-        "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
-        "chat": "https://www.drupal.org/node/314178"
+        "docs": "https://github.com/davidjguru/summerhouse/wiki",
+        "isues": "https://github.com/davidjguru/summerhouse/issues",
+        "mail": "davidjguru@gmail.com"
     },
     "repositories": [
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         },
-	{
-    "type": "package",
-    "package": {
-        "name": "d3/d3",
-        "version": "v3.5.17",
-        "type": "drupal-library",
-        "source": {
-            "url": "https://github.com/d3/d3.git",
-            "type": "git",
-            "reference": "tags/v3.5.17"
+	    {
+            "type": "package",
+            "package": {
+              "name": "d3/d3",
+              "version": "v3.5.17",
+              "type": "drupal-library",
+              "source": {
+                "url": "https://github.com/d3/d3.git",
+                "type": "git",
+                "reference": "tags/v3.5.17"
+              }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+              "name": "highlightjs/highlightjs",
+              "version": "11.2.0",
+              "type": "drupal-library",
+              "source": {
+                "url": "https://github.com/highlightjs/highlight.js.git",
+                "type": "git",
+                "reference": "tags/11.2.0"
+              }
+            }
         }
-    }
-},
-{
-    "type": "package",
-    "package": {
-        "name": "highlightjs/highlightjs",
-        "version": "11.2.0",
-        "type": "drupal-library",
-        "source": {
-            "url": "https://github.com/highlightjs/highlight.js.git",
-            "type": "git",
-            "reference": "tags/11.2.0"
-        }
-    }
-}
-
     ],
     "require": {
         "composer/installers": "^1.9",
@@ -55,7 +55,7 @@
     "conflict": {
         "drupal/drupal": "*"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
         "sort-packages": true,
@@ -64,6 +64,11 @@
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true
         }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "sh ./scripts/composer/post-install.sh"
+        ]
     },
     "extra": {
         "drupal-scaffold": {
