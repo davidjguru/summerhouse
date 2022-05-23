@@ -25,7 +25,7 @@ One more time: **Please avoid deploying this project in production environments*
 
 You can use SummerHouse in Linux environments, just by doing a local copy and then launch the platform using [DDEV, the containerization tool based in Docker](https://ddev.readthedocs.io/en/stable/). As **prerequisites**, You just need to have [Git](https://git-scm.com/) and DDEV ([Docker](https://www.docker.com/get-started/), [Docker-Compose](https://docs.docker.com/compose/)) installed on your system. 
 
-
+### Installing
 ```bash
 $ git clone https://github.com/davidjguru/summerhouse.git
 $ cd summerhouse
@@ -33,17 +33,25 @@ $ ddev start
 ```
 And the project will be loaded, configured, enabled and deployed in your local environment. You will see the main URLs opening in your browser.
 
-If you don't have the prerequisites installed in your host system, or maybe you are testing from a clean virtual machine, you can install the resource from a installer script created and commited to the repository. The installer script is here: 
-[](https://raw.githubusercontent.com/davidjguru/summerhouse/main/scripts/installing_docker_dockercompose_ddev)
+### Pre-Requisites
+**If you don't have the prerequisites installed in your host system**, or maybe you are testing from a clean virtual machine, you can install the resource from a installer script created and commited to the repository. The installer script is here:  
+[https://raw.githubusercontent.com/davidjguru/summerhouse/main/scripts/installing_docker_dockercompose_ddev](https://raw.githubusercontent.com/davidjguru/summerhouse/main/scripts/installing_docker_dockercompose_ddev)
 
-just download or copy/paste the content of the script in a file in your system, giving permissions and execute the installer script. This will install Docker, Docker-Compose and DDEV in your Linux system (Ubuntu, Debian). Also it will install some basic resources like git, jq, curl and basic packages.  
+Just download or copy/paste the content of the script in a file in your system, then give it permissions and execute the installer script. This will install Docker, Docker-Compose and DDEV in your Linux system (Ubuntu, Debian). Also it will install some basic resources like git, jq, curl and basic packages.  
 
 ```bash
 $ chmod +x installing_docker_dockercompose_ddev
 $ ./installing_docker_dockercompose_ddev
 ```
-
 This resource is available inside the folder `/scripts` in the root folder of the project.  
+
+### Useful Links 
+
+* See the Issue Queue: [davidjguru/summerhouse/issues](https://github.com/davidjguru/summerhouse/issues)  
+* See the Work In Progress: [davidjguru/summerhouse/project](https://github.com/davidjguru/summerhouse/projects/1)  
+* See the related Milestones: [davidjguru/summerhouse/milestones](https://github.com/davidjguru/summerhouse/milestones)  
+* See the Documentation pages: [davidjguru/summerhouse/wiki](https://github.com/davidjguru/summerhouse/wiki)  
+  
 
 --------------------------------------------
 **Table of Contents**
@@ -55,6 +63,8 @@ This resource is available inside the folder `/scripts` in the root folder of th
   - [4. Architecture](#4-architecture)  
   - [5. Read More](#5-read-more-1)  
 -----------------------------------------------
+
+
 
 
 ## 1. Introduction  
@@ -95,6 +105,12 @@ This resource is available inside the folder `/scripts` in the root folder of th
 
 ## 5. Read More  
 
+### About SummerHouse  
+
+* [Issues.](https://github.com/davidjguru/summerhouse/issues)  
+* [WIP.](https://github.com/davidjguru/summerhouse/projects/1)  
+* [Milestones.](davidjguru/summerhouse/milestones](https://github.com/davidjguru/summerhouse/milestones)  
+* [Documentation.](https://github.com/davidjguru/summerhouse/wiki)  
 
 ### About DDEV 
 * [Books/ Local Web development with DDEV.](https://www.therussianlullaby.com/blog/books-local-web-development-with-ddev-explained/)  
