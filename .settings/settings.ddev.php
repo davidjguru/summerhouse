@@ -28,7 +28,7 @@ $databases['default']['default'] = array(
   'prefix' => "",
 );
 
-$settings['hash_salt'] = 'dgaXelgdDBMaVFCKYZPrZJCWEnSTTIpNcJOuPMDxAKmSmxIyizDSRDWzAlnBNPfM';
+$settings['hash_salt'] = file_get_contents('../.settings/salt.txt');
 $settings['skip_permissions_hardening'] = TRUE;
 $settings['trusted_host_patterns'] = ['.*'];
 $settings['class_loader_auto_detect'] = FALSE;
