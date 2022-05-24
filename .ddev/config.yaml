@@ -25,6 +25,8 @@ hooks:
     - exec: "(drush status bootstrap | grep -q Successful) || (drush site-install --site-name=SummerHouse --account-name=admin --account-pass=admin --db-url=mysql://db:db@db/db -y && drush user-add-role 'administrator' admin)"
     - exec-host: "yes |ddev drush cset system.site uuid $(head -n 1 ./.settings/salt.txt)"
     - exec: "drush cr"
+    - exec: "drush entity:delete shortcut_set"
+    - exec: "drush pmu shortcut -y"
     - exec: "drush cim -y"
     - exec: "drush cr"
     # Generate an one-time login for admin.
