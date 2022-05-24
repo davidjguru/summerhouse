@@ -14,7 +14,7 @@ Through the installation and management of Summer House, you will be able to pla
 2. Containerization: **Docker**, **Docker Compose**, **DDEV** are basic in the daily life of development.  
 3. Backend Development: **PHP**, **Symfony**, **Drupal**, the holy Trinity in Drupal backend.  
 4. Frontend Development: **React**, **Vue**, **JavaScript (Vanilla)**, the most used JavaScript resources for frontend.  
-5. API Connections: **REST**, **GraphQL**, **Guzzle**, the two most popular models and the most popular PHP library for connections.  
+5. API Connections: **REST**, **GraphQL**, **JSON:API**, the two most popular models and the most popular PHP library for connections.  
 6. Code Styling: **PHPCS**, **GrumPHP**, **Eslint**, the fundamental way of review your own code.   
 7. Testing: **PHPUnit**, **Jest**, **Vitest**, learn how to develop code using Testing.  
  
@@ -109,10 +109,18 @@ This resource is available inside the folder `/scripts` in the root folder of th
 
 * [Issues.](https://github.com/davidjguru/summerhouse/issues)  
 * [WIP.](https://github.com/davidjguru/summerhouse/projects/1)  
-* [Milestones.](davidjguru/summerhouse/milestones](https://github.com/davidjguru/summerhouse/milestones)  
+* [Milestones.](https://github.com/davidjguru/summerhouse/milestones)  
 * [Documentation.](https://github.com/davidjguru/summerhouse/wiki)  
 
-### About DDEV 
+### About Decoupled Drupal  
+
+* [OpenSenseLabs: Different options of decoupling Drupal](https://opensenselabs.com/blog/articles/different-options-decoupling-drupal)  
+* [Drupal org: Decoupled Drupal](https://www.drupal.org/docs/develop/decoupled-drupal)  
+* [Droptica: Headless Drupal - What, When,How & Where -The Ultimate Guide To Decoupled Drupal](https://www.droptica.com/blog/headless-drupal-what-whenhow-where-ultimate-guide-decoupled-drupal/)  
+
+### About DDEV  
+
 * [Books/ Local Web development with DDEV.](https://www.therussianlullaby.com/blog/books-local-web-development-with-ddev-explained/)  
 * [Docker, Docker-Compose and DDEV - Cheatsheet.](https://www.therussianlullaby.com/blog/docker-docker-compose-and-ddev-cheatsheet/)  
 * [Creating development environments for Drupal with DDEV](https://www.therussianlullaby.com/blog/creating-development-environments-for-drupal-with-ddev/)  
+* [How To Develop a Drupal 9 Website on Your Local Machine Using Docker and DDEV](https://www.digitalocean.com/community/tutorials/how-to-develop-a-drupal-9-website-on-your-local-machine-using-docker-and-ddev)  
