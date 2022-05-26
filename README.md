@@ -1,31 +1,27 @@
-# Welcome to Summer House!  
+# Welcome to SummerHouse 
 
-Summer House is a sandbox for Drupal Decoupled projects.
+#### What is SummerHouse
+Summer House is a sandbox for Drupal Decoupled projects. 
+See the wiki section for more detailed info: [summerhouse/wiki](https://github.com/davidjguru/summerhouse/wiki) .  
 
-| ![Picture from Unsplash, by @tierramallorca](./images/davidjguru_decoupled_drupal_sandbox_summerhouse.jpeg) |
-| :-------------------------------------------------------------------------------------------------------------------: |
-|              *Picture from Unsplash, user [Tierra Mallorca, @tierramallorca](https://unsplash.com/@tierramallorca)*    
-  
-This project / platform / repository was created to facilitate on-boarding processes in headless projects of complex architectures, as a starting material to test all the most important aspects of this type of installations. But remember: **It should only be used for training purposes in local development environments**.  
+#### Pre-requisites
+You can only use SummerHouse in Linux environments and specifically in Debian / Ubuntu. SummerHouse requires the next resources:   
+* [Git](https://git-scm.com/)  
+* [Docker](https://www.docker.com/get-started/)  
+* [Docker-Compose](https://docs.docker.com/compose/)  
+* [DDEV](https://ddev.readthedocs.io/en/stable/)   
 
-Through the installation and management of Summer House, you will be able to play and practice with a series of topics related to web development in general and Drupal in particular, performing tasks related to different parts of "Full Stack" development:  
+**If you don't have the prerequisites installed in your host system** you can install the resources from a installer script created and commited to the repository. The [installer script is here](https://raw.githubusercontent.com/davidjguru/summerhouse/main/scripts/installing_docker_dockercompose_ddev](https://raw.githubusercontent.com/davidjguru/summerhouse/main/scripts/installing_docker_dockercompose_ddev).
 
-1. Scripting: **Bash**, **commands** and **file management** are essential for SysAdmins / DevOps roles.  
-2. Containerization: **Docker**, **Docker Compose**, **DDEV** are basic in the daily life of development.  
-3. Backend Development: **PHP**, **Symfony**, **Drupal**, the holy Trinity in Drupal backend.  
-4. Frontend Development: **React**, **Vue**, **JavaScript (Vanilla)**, the most used JavaScript resources for frontend.  
-5. API Connections: **REST**, **GraphQL**, **JSON:API**, the two most popular models and the most popular PHP library for connections.  
-6. Code Styling: **PHPCS**, **GrumPHP**, **Eslint**, the fundamental way of review your own code.   
-7. Testing: **PHPUnit**, **Jest**, **Vitest**, learn how to develop code using Testing.  
- 
+Just download the script in your system, give it permissions and execute the installer. This will install Docker, Docker-Compose and DDEV in your Linux system (Ubuntu, Debian). Also it will install some basic resources like git, jq, curl and basic packages.  
 
-One more time: **Please avoid deploying this project in production environments** or with output to the Internet.  
+```bash
+$ chmod +x installing_docker_dockercompose_ddev
+$ ./installing_docker_dockercompose_ddev
+``` 
 
-## 0. TL;DR
+#### Installation and deploy
 
-You can use SummerHouse in Linux environments, just by doing a local copy and then launch the platform using [DDEV, the containerization tool based in Docker](https://ddev.readthedocs.io/en/stable/). As **prerequisites**, You just need to have [Git](https://git-scm.com/) and DDEV ([Docker](https://www.docker.com/get-started/), [Docker-Compose](https://docs.docker.com/compose/)) installed on your system. 
-
-### Installing
 ```bash
 $ git clone https://github.com/davidjguru/summerhouse.git
 $ cd summerhouse
@@ -33,94 +29,26 @@ $ ddev start
 ```
 And the project will be loaded, configured, enabled and deployed in your local environment. You will see the main URLs opening in your browser.
 
-### Pre-Requisites
-**If you don't have the prerequisites installed in your host system**, or maybe you are testing from a clean virtual machine, you can install the resource from a installer script created and commited to the repository. The installer script is here:  
-[https://raw.githubusercontent.com/davidjguru/summerhouse/main/scripts/installing_docker_dockercompose_ddev](https://raw.githubusercontent.com/davidjguru/summerhouse/main/scripts/installing_docker_dockercompose_ddev)
+#### Addresses 
 
-Just download or copy/paste the content of the script in a file in your system, then give it permissions and execute the installer script. This will install Docker, Docker-Compose and DDEV in your Linux system (Ubuntu, Debian). Also it will install some basic resources like git, jq, curl and basic packages.  
+Summer House will deploy a series of containers in an internal network connected by DDEV, with internal or external addresses (or both), depending on the service they offer to the project.  
+- Drupal backend: https://summerhouse.ddev.site (external) // ddev-summerhouse-web:443 (internal)
+- Database: ddev-summerhouse-db:3306 (internal)
+- PHPMyAdmin: https://summerhouse.ddev.site:8037 (external) // ddev-summerhouse-dba:80 (internal)
+- Portainer: https://summerhouse.ddev.site:8001 (external) // ddev-summerhouse-portainer:9000 (internal)
+- Mailhog: https://summerhouse.ddev.site:8026  (external)
 
-```bash
-$ chmod +x installing_docker_dockercompose_ddev
-$ ./installing_docker_dockercompose_ddev
-```
-This resource is available inside the folder `/scripts` in the root folder of the project.  
+#### Resources 
 
-### Useful Links 
+- Container web 1 - Drupal backend for editorial task.
+- Container Database - Drupal database.
+- PHPMyAdmin - Graphic Interface for the Drupal database.
+- Portainer - Graphic Interface for managing Containers in a visual way.
+- Mailhog - Email manager for testing. 
+
+#### Useful Links 
 
 * See the Issue Queue: [davidjguru/summerhouse/issues](https://github.com/davidjguru/summerhouse/issues)  
 * See the Work In Progress: [davidjguru/summerhouse/project](https://github.com/davidjguru/summerhouse/projects/1)  
 * See the related Milestones: [davidjguru/summerhouse/milestones](https://github.com/davidjguru/summerhouse/milestones)  
 * See the Documentation pages: [davidjguru/summerhouse/wiki](https://github.com/davidjguru/summerhouse/wiki)  
-  
-
---------------------------------------------
-**Table of Contents**
-- [Summer House](#summer-house)  
-  - [0. TL;DR](#0-tldr)  
-  - [1. Introduction](#1-introduction)  
-  - [2. Tooling / Stack](#2-tooling--stack)  
-  - [3. How to deploy the platform](#3-how-to-deploy-the-platform)  
-  - [4. Architecture](#4-architecture)  
-  - [5. Read More](#5-read-more-1)  
------------------------------------------------
-
-
-
-
-## 1. Introduction  
-
-
-## 2. Tooling / Stack  
-
-
-**1. Control Version**  
-
-1. Git
-2. Github
-3. Gitflow 
-
-**2. Containerization (Software virtualization)**  
-
-1. Docker
-2. Docker Compose
-3. DDEV
-   
-**3. Web technologies**  
-
-1. Drupal / PHP
-2. ReactJS
-3. GraphQL
-   
-**4. Code Styling**  
-
-5. PHPCS
-6. PHPBF
-7. GrumPHP
-## 3. How to deploy the platform   
-
-
-## 4. Architecture  
-
-
-
-## 5. Read More  
-
-### About SummerHouse  
-
-* [Issues.](https://github.com/davidjguru/summerhouse/issues)  
-* [WIP.](https://github.com/davidjguru/summerhouse/projects/1)  
-* [Milestones.](https://github.com/davidjguru/summerhouse/milestones)  
-* [Documentation.](https://github.com/davidjguru/summerhouse/wiki)  
-
-### About Decoupled Drupal  
-
-* [OpenSenseLabs: Different options of decoupling Drupal](https://opensenselabs.com/blog/articles/different-options-decoupling-drupal)  
-* [Drupal org: Decoupled Drupal](https://www.drupal.org/docs/develop/decoupled-drupal)  
-* [Droptica: Headless Drupal - What, When,How & Where -The Ultimate Guide To Decoupled Drupal](https://www.droptica.com/blog/headless-drupal-what-whenhow-where-ultimate-guide-decoupled-drupal/)  
-
-### About DDEV  
-
-* [Books/ Local Web development with DDEV.](https://www.therussianlullaby.com/blog/books-local-web-development-with-ddev-explained/)  
-* [Docker, Docker-Compose and DDEV - Cheatsheet.](https://www.therussianlullaby.com/blog/docker-docker-compose-and-ddev-cheatsheet/)  
-* [Creating development environments for Drupal with DDEV](https://www.therussianlullaby.com/blog/creating-development-environments-for-drupal-with-ddev/)  
-* [How To Develop a Drupal 9 Website on Your Local Machine Using Docker and DDEV](https://www.digitalocean.com/community/tutorials/how-to-develop-a-drupal-9-website-on-your-local-machine-using-docker-and-ddev)  
