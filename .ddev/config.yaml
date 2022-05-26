@@ -1,6 +1,6 @@
 name: summerhouse
 type: drupal9
-docroot: web
+docroot: backend_drupal
 php_version: "7.4"
 webserver_type: nginx-fpm
 router_http_port: "80"
