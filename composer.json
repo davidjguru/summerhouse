@@ -73,35 +73,35 @@
     "extra": {
         "drupal-scaffold": {
             "locations": {
-                "web-root": "web/"
+                "web-root": "backend_drupal/"
             }
         },
         "installer-paths": {
-            "web/core": [
+            "backend_drupal/core": [
                 "type:drupal-core"
             ],
-            "web/libraries/{$name}": [
+            "backend_drupal/libraries/{$name}": [
                 "type:drupal-library"
             ],
-            "web/modules/contrib/{$name}": [
+            "backend_drupal/modules/contrib/{$name}": [
                 "type:drupal-module"
             ],
-            "web/profiles/contrib/{$name}": [
+            "backend_drupal/profiles/contrib/{$name}": [
                 "type:drupal-profile"
             ],
-            "web/themes/contrib/{$name}": [
+            "backend_drupal/themes/contrib/{$name}": [
                 "type:drupal-theme"
             ],
             "drush/Commands/contrib/{$name}": [
                 "type:drupal-drush"
             ],
-            "web/modules/custom/{$name}": [
+            "backend_drupal/modules/custom/{$name}": [
                 "type:drupal-custom-module"
             ],
-            "web/profiles/custom/{$name}": [
+            "backend_drupal/profiles/custom/{$name}": [
                 "type:drupal-custom-profile"
             ],
-            "web/themes/custom/{$name}": [
+            "backend_drupal/themes/custom/{$name}": [
                 "type:drupal-custom-theme"
             ]
         },
