@@ -1,7 +1,8 @@
 # Welcome to SummerHouse 
 
 #### What is SummerHouse
-Summer House is a sandbox for Drupal Decoupled projects. 
+Summer House is a sandbox for Drupal Decoupled projects.   
+
 See the wiki section for more detailed info: [summerhouse/wiki](https://github.com/davidjguru/summerhouse/wiki) .  
 
 #### Pre-requisites
@@ -11,7 +12,7 @@ You can only use SummerHouse in Linux environments and specifically in Debian / 
 * [Docker-Compose](https://docs.docker.com/compose/)  
 * [DDEV](https://ddev.readthedocs.io/en/stable/)   
 
-**If you don't have the prerequisites installed in your host system** you can install the resources from a installer script created and commited to the repository. The [installer script is here](https://raw.githubusercontent.com/davidjguru/summerhouse/main/scripts/installing_docker_dockercompose_ddev).
+**If you don't have the prerequisites installed in your host system** you can install the resources from a installer script created and commited to the repository. The [installer script is here]([https://raw.githubusercontent.com/davidjguru/summerhouse/main/scripts/installing_docker_dockercompose_ddev](https://github.com/davidjguru/summerhouse/blob/main/scripts/utilities/installing_docker_dockercompose_ddev)), in the `/scripts/utilities` folder.
 
 Just download the script in your system, give it permissions and execute the installer. This will install Docker, Docker-Compose and DDEV in your Linux system (Ubuntu, Debian). Also it will install some basic resources like git, jq, curl and basic packages.  
 
