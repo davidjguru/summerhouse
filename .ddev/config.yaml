@@ -31,6 +31,8 @@ hooks:
     - exec: "drush cr"
     # Generate an one-time login for admin.
     - exec-host: "xdg-open $(ddev drush uli admin)" 
+    # Generate 10 new nodes with type article.
+    - exec: "drush genc --bundles=article 10"
     # Enable debugging by-default
     - exec-host: "ddev xdebug on"
   pre-stop:
