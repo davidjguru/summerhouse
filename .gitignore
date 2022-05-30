@@ -87,7 +87,7 @@
 /web.config
 
 
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+## Frontend React zone. 
 
 # dependencies
 /frontend_react/node_modules
@@ -96,10 +96,10 @@
 /frontend_react/.pnp.js
 
 # testing
-/frontend_react//coverage
+/frontend_react/coverage
 
 # production
-/frontend_react//build
+/frontend_react/build
 
 # misc
 /frontend_react/.DS_Store
