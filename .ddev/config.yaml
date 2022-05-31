@@ -17,6 +17,7 @@ hooks:
   pre-start:
     # Resolve the extra service files if not exists.
     - exec-host: "([ ! -f ./.ddev/docker-compose.portainer.yaml ] && wget https://raw.githubusercontent.com/drud/ddev-contrib/master/docker-compose-services/portainer/docker-compose.portainer.yaml && mv docker-compose.portainer.yaml ./.ddev/) || (echo 'A portainer service file has been located in your system.')"
+    - exec-host: "([ ! -f ./.ddev/docker-compose.frontend_react.yaml ] && cp ./frontend_react/docker-compose.frontend_react.yaml ./.ddev/) || (echo 'A frontend react service file has been located in your system.')"
   post-start:
     - exec: sudo echo alias ll=\"ls -lhA\" >> ~/.bashrc
     # Resolve all dependencies by Composer in container.
