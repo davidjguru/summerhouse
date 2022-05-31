@@ -85,3 +85,28 @@
 /robots.txt
 /update.php
 /web.config
+
+
+## Frontend React zone. 
+
+# dependencies
+/frontend_react/node_modules
+/frontend_react/.pnp
+/frontend_react/.pnp.js
+
+# testing
+/frontend_react/coverage
+
+# production
+/frontend_react/build
+
+# misc
+/frontend_react/.DS_Store
+/frontend_react/.env.local
+/frontend_react/.env.development.local
+/frontend_react/.env.test.local
+/frontend_react/.env.production.local
+
+/frontend_react/npm-debug.log*
+/frontend_react/yarn-debug.log*
+/frontend_react/yarn-error.log*
