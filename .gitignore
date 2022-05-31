@@ -91,7 +91,6 @@
 
 # dependencies
 /frontend_react/node_modules
-/frontend_react/public/
 /frontend_react/.pnp
 /frontend_react/.pnp.js
 
