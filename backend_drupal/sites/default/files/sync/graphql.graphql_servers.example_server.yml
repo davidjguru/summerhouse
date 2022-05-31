@@ -1,0 +1,16 @@
+uuid: d77b5328-640e-4fa5-ab0e-f9a621c1b91b
+langcode: en
+status: true
+dependencies: {  }
+name: example_server
+label: 'Example Server'
+endpoint: /graphql
+debug_flag: 3
+schema: example
+caching: true
+batching: true
+disable_introspection: false
+query_depth: null
+query_complexity: null
+schema_configuration: {  }
+persisted_queries_settings: {  }
