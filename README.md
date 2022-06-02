@@ -7,7 +7,7 @@ See the wiki section for more detailed info: [summerhouse/wiki](https://github.c
 ### Pre-requisites
 You can only use SummerHouse in Linux environments and specifically in Debian / Ubuntu. SummerHouse requires the next resources: [Git](https://git-scm.com/), [Docker](https://www.docker.com/get-started/), [Docker-Compose](https://docs.docker.com/compose/) and [DDEV](https://ddev.readthedocs.io/en/stable/).  
 
-**If you don't have the prerequisites installed in your host system** you can install the resources from a installer script created and commited to the repository. The [installer script is here](https://raw.githubusercontent.com/davidjguru/summerhouse/main/scripts/installing_docker_dockercompose_ddev](https://raw.githubusercontent.com/davidjguru/summerhouse/main/scripts/installing_docker_dockercompose_ddev).
+**If you don't have the prerequisites installed in your host system** you can install the resources from a installer script created and commited to the repository. The [installer script is here](https://raw.githubusercontent.com/davidjguru/summerhouse/main/scripts/installing_docker_dockercompose_ddev).
 
 Just download the script in your system, give it permissions and execute the installer. This will install Docker, Docker-Compose and DDEV in your Linux system (Ubuntu, Debian). Also it will install some basic resources like git, jq, curl and basic packages.  
 
