@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  frontend_react:
+    build:
+      context: ../frontend_react/.
+      target: development
+    expose:
+      - "3000"
+    environment:
+      - VIRTUAL_HOST=$DDEV_HOSTNAME
+      - HTTP_EXPOSE=3000:3000
+      - HTTPS_EXPOSE=3001:3000
+    restart: "no"
+    container_name: ddev-${DDEV_SITENAME}-frontend_react
+    labels:
+      com.ddev.site-name: ${DDEV_SITENAME}
+      com.ddev.approot: $DDEV_APPROOT
+    volumes:
+      - ../frontend_react/src:/app/src
+    external_links:
+      - "ddev-router:${DDEV_HOSTNAME}"
+    cap_add:
+      - SYS_ADMIN
+volumes:
+  frontend_react_data:
+
+networks:
+  default:
+    external:
+      name: ddev_default

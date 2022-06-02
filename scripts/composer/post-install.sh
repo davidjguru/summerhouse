@@ -18,15 +18,15 @@
 #
 # Prepare the main basic settings file for installation
 echo "Copying default.settings.php if no settings.php exists."
-cp .settings/default.settings.php web/sites/default/settings.php
-chmod 777 web/sites/default/settings.php
+cp .settings/default.settings.php backend_drupal/sites/default/settings.php
+chmod 777 backend_drupal/sites/default/settings.php
 
 # Prepare the secondary settings file for installation
 echo "Copying settings.ddev.php if no settings.ddev.php exists."
-cp .settings/settings.ddev.php web/sites/default/settings.ddev.php
-chmod 777 web/sites/default/settings.ddev.php
+cp .settings/settings.ddev.php backend_drupal/sites/default/settings.ddev.php
+chmod 777 backend_drupal/sites/default/settings.ddev.php
 
 # Prepare the services file for installation
 echo "Copying services to default folder."
-cp .settings/default.services.yml web/sites/default/services.yml
-chmod 777 web/sites/default/services.yml
+cp .settings/default.services.yml backend_drupal/sites/default/services.yml
+chmod 777 backend_drupal/sites/default/services.yml
