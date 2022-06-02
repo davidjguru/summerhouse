@@ -15,7 +15,7 @@ Just download the script in your system, give it permissions and execute the ins
 $ chmod +x installing_docker_dockercompose_ddev
 $ ./installing_docker_dockercompose_ddev
 ``` 
-**Note:** If you consider that delegating the prerequisites to a script is insecure or may put your environment at risk, here is some information so you can do it by yourself:
+**Note:** If you consider that delegate the prerequisites to a script is insecure or may put your environment at risk, here is some information so you can do it by yourself:
 * [How to Install Docker](https://www.digitalocean.com/community/tutorial_collections/how-to-install-and-use-docker)  
 * [How To Install Docker Compose](https://www.digitalocean.com/community/tutorial_collections/how-to-install-docker-compose)  
 * [How to Install DDEV](https://www.digitalocean.com/community/tutorials/how-to-develop-a-drupal-9-website-on-your-local-machine-using-docker-and-ddev#option-2-mdash-installing-ddev-on-linux)  
