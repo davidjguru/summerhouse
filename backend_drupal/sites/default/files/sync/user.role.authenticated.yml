@@ -8,6 +8,7 @@ dependencies:
     - comment
     - contact
     - filter
+    - graphql
     - search
     - system
 _core:
@@ -20,7 +21,12 @@ permissions:
   - 'access comments'
   - 'access content'
   - 'access site-wide contact form'
+  - 'bypass graphql access'
+  - 'execute example_server arbitrary graphql requests'
+  - 'execute example_server persisted graphql requests'
   - 'post comments'
   - 'search content'
   - 'skip comment approval'
+  - 'use example_server graphql explorer'
+  - 'use example_server graphql voyager'
   - 'use text format basic_html'
