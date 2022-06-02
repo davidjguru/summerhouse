@@ -1,7 +1,8 @@
 # Welcome to SummerHouse 
 
 ### What is SummerHouse
-Summer House is a sandbox for Drupal Decoupled projects, on-the-fly and **only for local development**.  
+Summer House is a sandbox for Drupal Decoupled projects, built for training purposes and focused on [learning-by-doing](https://www.lifehack.org/898427/learning-by-doing).
+This project deploys a whole Decoupled Drupal platform on-the-fly and **only for local development**.  
 See the wiki section for more detailed info: [summerhouse/wiki](https://github.com/davidjguru/summerhouse/wiki).  
 
 ### Pre-requisites
@@ -44,7 +45,7 @@ Summer House will deploy a series of containers from an internal network connect
 - Mailhog: Email testing tool, in https://summerhouse.ddev.site:8026
 
 
-#### Useful Links 
+### Useful Links 
 
 * See the Issue Queue: [davidjguru/summerhouse/issues](https://github.com/davidjguru/summerhouse/issues)  
 * See the Work In Progress: [davidjguru/summerhouse/project](https://github.com/davidjguru/summerhouse/projects/1)  
