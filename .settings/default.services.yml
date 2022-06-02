@@ -33,11 +33,11 @@ parameters:
     - sftp
     - webcal
     - rtsp
-   cors.config:
-    enabled: false
-    allowedHeaders: []
-    allowedMethods: []
+  cors.config:
+    enabled: true
+    allowedHeaders: ['x-csrf-token','authorization','content-type','accept','origin','x-requested-with']
+    allowedMethods: ['*']
     allowedOrigins: ['*']
-    exposedHeaders: false
+    exposedHeaders: true
     maxAge: false
-    supportsCredentials: false
+    supportsCredentials: true
