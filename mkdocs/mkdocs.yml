@@ -1,0 +1,12 @@
+site_name: SummerHouse handbook
+theme: material
+dev_addr: '0.0.0.0:8080'
+nav:
+  - Home: Home.md
+  - About Summer House: About-Summer-House.md
+  - How to install Summer House: How-to-install-Summer-House.md
+  - Know your Summer House installation: Know-your-Summer-House-Installation.md
+  - More How-To guides: More-How-To-guides.md
+  - Read More: Read-More.md
+markdown_extensions:
+  - admonition
