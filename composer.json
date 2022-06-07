@@ -4,6 +4,12 @@
     "type": "project",
     "license": "GPL-2.0-or-later",
     "homepage": "https://github.com/davidjguru/summerhouse",
+    "authors": [
+        {
+            "name": "David Rodriguez - @davidjguru",
+            "role": "Maintainer"
+        }
+    ],
     "support": {
         "docs": "https://github.com/davidjguru/summerhouse/wiki",
         "issues": "https://github.com/davidjguru/summerhouse/issues",
