@@ -40,7 +40,6 @@ hooks:
     - exec: "drush genc --bundles=article 10"
     # Enable debugging by-default
     - exec-host: "ddev xdebug on"
-    - exec-host: "ddev exec ddev-summerhouse-mkdocs mkdocs build"
   pre-stop:
     - exec-host: "ddev xdebug off"
-    - exec: "ddev drush cex -y"
+    - exec: "drush cex -y"

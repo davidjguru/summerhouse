@@ -10,8 +10,11 @@ RUN pip install mkdocs-git-revision-date-plugin
 RUN pip install mkdocs-git-revision-date-localized-plugin
 
 # Exposing port.
-EXPOSE 8000
+EXPOSE 8080
+WORKDIR /home
+COPY . .
 
-# Entrypoint and initial command.
+# Entrypoint and commands.
 ENTRYPOINT ["/usr/local/bin/mkdocs"]
+CMD ["build"]
 CMD ["serve"]
