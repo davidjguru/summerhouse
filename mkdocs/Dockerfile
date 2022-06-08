@@ -13,5 +13,5 @@ RUN pip install mkdocs-git-revision-date-localized-plugin
 EXPOSE 8000
 
 # Entrypoint and initial command.
-ENTRYPOINT ["/usr/src/mkdocs/.local/bin/mkdocs"]
+ENTRYPOINT ["/usr/local/bin/mkdocs"]
 CMD ["serve"]
