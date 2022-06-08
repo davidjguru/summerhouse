@@ -20,8 +20,6 @@ hooks:
     - exec-host: "([ ! -f ./.ddev/docker-compose.frontend_react.yaml ] && mv ./frontend_react/docker-compose.frontend_react.yaml ./.ddev/) || (echo 'A frontend react service file has been located in your system.')"
     - exec-host: "([ ! -f ./.ddev/docker-compose.mkdocs.yaml ] && mv ./mkdocs/docker-compose.mkdocs.yaml ./.ddev/) || (echo 'A MkDocs service file has been located in your system.')"
     - exec-host: "(git clone https://github.com/davidjguru/summerhouse.wiki.git ./mkdocs/docs)"
-    # Prepare the mkdocs container.
-    - exec-host: "mv ./mkdocs/mkdocs.yml ./mkdocs/docs/"
   post-start:
     - exec: sudo echo alias ll=\"ls -lhA\" >> ~/.bashrc
     # Resolve all dependencies by Composer in container.
@@ -45,4 +43,4 @@ hooks:
     - exec-host: "ddev exec ddev-summerhouse-mkdocs mkdocs build"
   pre-stop:
     - exec-host: "ddev xdebug off"
-    - exec: "drush cex -y"
+    - exec: "ddev drush cex -y"
