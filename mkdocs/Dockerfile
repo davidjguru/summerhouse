@@ -10,7 +10,7 @@ RUN pip install mkdocs-git-revision-date-plugin
 RUN pip install mkdocs-git-revision-date-localized-plugin
 
 # Exposing port.
-EXPOSE 8080
+EXPOSE 8000
 WORKDIR /home
 COPY . .
 

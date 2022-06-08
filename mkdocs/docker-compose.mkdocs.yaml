@@ -6,15 +6,15 @@ services:
       - "8000"
     environment:
       - VIRTUAL_HOST=$DDEV_HOSTNAME
-      - HTTP_EXPOSE=8080:8080
-      - HTTPS_EXPOSE=8081:8080
+      - HTTP_EXPOSE=8080:8000
+      - HTTPS_EXPOSE=8081:8000
     restart: "no"
     container_name: ddev-${DDEV_SITENAME}-mkdocs
     labels:
       com.ddev.site-name: ${DDEV_SITENAME}
       com.ddev.approot: $DDEV_APPROOT
     volumes:
-      - ../mkdocs/:/app/
+      - ../mkdocs/:/home/
     external_links:
       - "ddev-router:${DDEV_HOSTNAME}"
     cap_add:
