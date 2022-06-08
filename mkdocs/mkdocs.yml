@@ -1,6 +1,8 @@
 site_name: SummerHouse handbook
+site_description: Summer House documentation for developers.
 theme: material
-dev_addr: '0.0.0.0:8080'
+site_url: http://mkdocs.summerhouse.ddev.site:8080/
+dev_addr: '127.0.0.1:8080'
 nav:
   - Home: Home.md
   - About Summer House: About-Summer-House.md
@@ -10,3 +12,5 @@ nav:
   - Read More: Read-More.md
 markdown_extensions:
   - admonition
+  - smarty
+  - sane_lists
