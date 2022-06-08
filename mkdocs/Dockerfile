@@ -4,9 +4,8 @@ FROM python:3.8
 ARG WITH_PLUGINS=true
 ARG USER=1001
 
-RUN adduser -h /usr/src/mkdocs -D -u $USER mkdocs \
-&& apk add bash \
-&& apk add git 
+RUN adduser -h /usr/src/mkdocs -D -u $USER mkdocs
+RUN apt install git
 
 # Environment variables.
 ENV PACKAGES=/usr/local/lib/python3.9/site-packages
