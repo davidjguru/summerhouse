@@ -1,4 +1,4 @@
-FROM python:3.8
+FROM python:3.8 AS development
 
 # Running pip for dependencies.
 RUN pip install --upgrade pip 
@@ -15,6 +15,6 @@ WORKDIR /home
 COPY . .
 
 # Entrypoint and commands.
-ENTRYPOINT ["/usr/local/bin/mkdocs"]
+ENTRYPOINT ["mkdocs"]
 CMD ["build"]
-CMD ["serve"]
+CMD ["serve", "--dev-addr=0.0.0.0:8000"]
