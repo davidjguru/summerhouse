@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="460" height="300" src="[http://www.fillmurray.com/460/300](https://user-images.githubusercontent.com/21089086/172926048-a4c5c787-4e2f-4904-8a34-d90f4c085a76.jpg)">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/21089086/172926048-a4c5c787-4e2f-4904-8a34-d90f4c085a76.jpg">
 </p>
 
 # Welcome to Summer House 
