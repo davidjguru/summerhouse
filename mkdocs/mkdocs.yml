@@ -1,8 +1,6 @@
 site_name: SummerHouse handbook
 site_description: Summer House documentation for developers.
 theme: material
-site_url: http://mkdocs.summerhouse.ddev.site:49150/
-dev_addr: '127.0.0.1:8000'
 nav:
   - Home: Home.md
   - About Summer House: About-Summer-House.md
