@@ -1,14 +1,21 @@
 FROM node:16.15.0-alpine AS development
+
+# Environment variables.
 ENV NODE_ENV development
-# Add a work directory
+
+# Add a work directory.
 WORKDIR /app
-# Cache and Install dependencies
+
+# Cache and Install dependencies.
 COPY package.json .
 COPY yarn.lock .
 RUN yarn install
-# Copy app files
+
+# Copy app files.
 COPY . .
-# Expose port
+
+# Expose port.
 EXPOSE 3000
-# Start the app
+
+# Start the app.
 CMD [ "yarn", "start" ]

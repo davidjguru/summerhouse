@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  mkdocs:
+    build: ../mkdocs/.
+    expose:
+      - "8000"
+    environment:
+      - VIRTUAL_HOST=$DDEV_HOSTNAME
+      - HTTP_EXPOSE=8091:8000
+      - HTTPS_EXPOSE=8443:8000
+    restart: "no"
+    container_name: ddev-${DDEV_SITENAME}-mkdocs
+    labels:
+      com.ddev.site-name: ${DDEV_SITENAME}
+      com.ddev.approot: $DDEV_APPROOT
+    volumes:
+      - ../mkdocs/:/home/
+    external_links:
+      - "ddev-router:${DDEV_HOSTNAME}"
+    cap_add:
+      - SYS_ADMIN
+volumes:
+  mkdocs_data:
+
+networks:
+  default:
+    external:
+      name: ddev_default
