@@ -38,12 +38,13 @@ Please, **remember:** Summer House is **only** for local development. It can con
 
 Summer House will deploy a series of containers from an internal network connected by DDEV with external access from your browser: 
 
-- Drupal backend: http://backend.summerhouse.ddev.site
-- React frontend: http://react.summerhouse.ddev.site
-- Database: ddev-summerhouse-db:3306 (internal)
-- PHPMyAdmin: Graphic Interface for the database, in https://summerhouse.ddev.site:8037
-- Portainer: Graphic Interface for managing Containers, in https://summerhouse.ddev.site:8001
-- Mailhog: Email testing tool, in https://summerhouse.ddev.site:8026
+- **Drupal** Backend: http://backend.summerhouse.ddev.site
+- **React** Frontend: http://react.summerhouse.ddev.site:3000
+- **Database**: ddev-summerhouse-db:3306 (internal)
+- **MkDocs**: Static Site generator for documents, in http://summerhouse.ddev.site:8091
+- **PHPMyAdmin**: Graphic Interface for the database, in http://summerhouse.ddev.site:8036/
+- **Portainer**: Graphic Interface for managing Containers, in http://summerhouse.ddev.site:9001
+- **Mailhog**: Email testing tool, in http://summerhouse.ddev.site:8025/
 
 
 ### Useful Links 
