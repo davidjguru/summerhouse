@@ -1,5 +1,8 @@
 site_name: SummerHouse handbook
 site_description: Summer House documentation for developers.
+repo_url: https://github.com/davidjguru/summerhouse
+repo_name: davidjguru/summerhouse
+edit_uri: ""
 theme: material
 nav:
   - Home: Home.md
@@ -8,6 +11,22 @@ nav:
   - Know your Summer House installation: Know-your-Summer-House-Installation.md
   - More How-To guides: More-How-To-guides.md
   - Read More: Read-More.md
+copyright: Copyleft or CC BY-NC-SA; 2022 David Rodríguez, @davidjguru
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/davidjguru
+      name: davidjguru on Twitter
+    - icon:  fontawesome/brands/github
+      link: https://github.com/davidjguru
+      name: davidjguru on Github
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/davidjguru/
+      name: davidjguru on Linkedin
+    - icon: fontawesome/brands/medium
+      link: https://davidjguru.medium.com/
+      name: davidjguru on Medium
 markdown_extensions:
   - admonition
   - smarty
