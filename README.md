@@ -1,6 +1,7 @@
-# Welcome to SummerHouse 
+# Welcome to Summer House 
+Welcome to Summer House, a fully-dockerized environment for onboarding processes based in Decoupled / Headless Drupal.  
 
-### What is SummerHouse
+### What is Summer House
 Summer House is a sandbox for Drupal Decoupled projects, generating **[boilerplate code](https://www.freecodecamp.org/news/whats-boilerplate-and-why-do-we-use-it-let-s-check-out-the-coding-style-guide-ac2b6c814ee7/)**, built for **training** purposes and focused on **[learning-by-doing](https://www.lifehack.org/898427/learning-by-doing)**. The project is **self-contained** and host environment **agnostic**.
 This project deploys a whole Decoupled Drupal platform on-the-fly with a lot of extra-resources, tools and configurations, but **only for local development**. You can use Summer House for **Onboarding processes**, workshops and training sessions. **Or just for fun**.  
 
@@ -9,7 +10,7 @@ This project deploys a whole Decoupled Drupal platform on-the-fly with a lot of 
 ### Pre-requisites
 You can use SummerHouse in Linux environments and specifically in Debian / Ubuntu. SummerHouse requires the next resources: [Git](https://git-scm.com/), [Docker](https://www.docker.com/get-started/), [Docker-Compose](https://docs.docker.com/compose/) and [DDEV](https://ddev.readthedocs.io/en/stable/).  
 
-**If you don't have the prerequisites installed in your host system** you can install the resources from a installer script created and commited to the repository. The [installer script is here](https://raw.githubusercontent.com/davidjguru/summerhouse/main/scripts/installing_docker_dockercompose_ddev).
+**If you don't have the prerequisites installed in your host system** you can install the resources from a installer script created and committed to the repository. The [installer script is here](https://raw.githubusercontent.com/davidjguru/summerhouse/main/scripts/installing_docker_dockercompose_ddev).
 
 Just download the script in your system, give it permissions and execute the installer. This will install Docker, Docker-Compose and DDEV in your Linux system (Ubuntu, Debian). Also it will install some basic resources like git, jq, curl and basic packages.  
 
