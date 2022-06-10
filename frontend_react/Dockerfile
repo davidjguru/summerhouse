@@ -5,6 +5,7 @@ ENV NODE_ENV development
 
 # Add a work directory.
 WORKDIR /app
+COPY . .
 
 # Expose port.
 EXPOSE 3000
