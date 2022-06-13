@@ -16,7 +16,7 @@ services:
       com.ddev.site-name: ${DDEV_SITENAME}
       com.ddev.approot: $DDEV_APPROOT
     volumes:
-      - ../frontend_react/:/app/
+      - ../frontend_react/src:/app/src
     external_links:
       - "ddev-router:${DDEV_HOSTNAME}"
     cap_add:
