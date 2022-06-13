@@ -1,6 +1,4 @@
-<p align="center">
-  <img width="460" height="300" src="https://user-images.githubusercontent.com/21089086/172926048-a4c5c787-4e2f-4904-8a34-d90f4c085a76.jpg">
-</p>
+![summerhouse_main_image](https://user-images.githubusercontent.com/21089086/173317358-c6698da5-0169-4df4-adf0-2273373feb4f.png)
 
 # Welcome to Summer House 
 Welcome to Summer House, a fully-dockerized environment for onboarding processes based in Decoupled / Headless Drupal.  
