@@ -13,8 +13,7 @@ export default function Header() {
   return (
       <AppBar position="static">
         <Toolbar>
-          {/*Inside the IconButton, we 
-           can render various icons*/}
+          {/*Inside the IconButton, we  can render various icons*/}
           <IconButton
             size="large"
             edge="start"
@@ -22,16 +21,13 @@ export default function Header() {
             aria-label="menu"
             sx={{ mr: 2 }}
           >
-            {/*This is a simple Menu 
-             Icon wrapped in Icon */}
+            {/*This is a simple Menu Icon wrapped in Icon */}
             <MenuIcon />
           </IconButton>
-          {/* The Typography component applies 
-           default font weights and sizes */}
+          {/* The Typography component applies default font weights and sizes */}
   
-          <Typography variant="h6" 
-            component="div" sx={{ flexGrow: 1 }}>
-            GeeksforGeeks Header
+          <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
+            Summer House
           </Typography>
           <Button color="inherit">Login</Button>
         </Toolbar>
