@@ -1,6 +1,9 @@
 # Ignore dependencies that are managed with Composer.
 **/vendor/
 
+.ddev/docker-compose.*
+/mkdocs/docs
+
 # Ignore configuration files that may contain sensitive information.
 /backend_drupal/sites/*/settings*.php
 /backend_drupal/sites/*/services*.yml
@@ -93,6 +96,7 @@
 /frontend_react/node_modules
 /frontend_react/.pnp
 /frontend_react/.pnp.js
+/frontend_react/src/assets
 
 # testing
 /frontend_react/coverage
