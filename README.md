@@ -57,3 +57,11 @@ Summer House will deploy a series of containers from an internal network connect
 * See the Work In Progress: [davidjguru/summerhouse/project](https://github.com/davidjguru/summerhouse/projects/1)  
 * See the related Milestones: [davidjguru/summerhouse/milestones](https://github.com/davidjguru/summerhouse/milestones)  
 * See the Documentation pages: [davidjguru/summerhouse/wiki](https://github.com/davidjguru/summerhouse/wiki)  
+
+### Acknowledgments and Thanks
+
+* Thanks to [Digitalist Sweden](https://www.digitalist.se/english) for the opportunity to improve the onboarding processes.  
+* Thanks to [Helena Nordenfelt](https://www.linkedin.com/in/helena-nordenfelt-4472184/) for giving me the chance to focus on this idea.  
+* Thanks to [Randy Fay](https://www.linkedin.com/in/randyfay/) for the amazing work with [DDEV](https://ddev.readthedocs.io/en/stable/) and [its community](https://github.com/drud/ddev-contrib).   
+* Thanks to [Pedro Cambra](https://www.linkedin.com/in/pcambra/) from [Cambrico](https://www.drupal.org/cambrico), for being a true mentor.   
+  
