@@ -16,13 +16,11 @@ services:
       com.ddev.site-name: ${DDEV_SITENAME}
       com.ddev.approot: $DDEV_APPROOT
     volumes:
-      - ../frontend_react:/app
+      - ../frontend_react/:/app/
     external_links:
       - "ddev-router:${DDEV_HOSTNAME}"
     cap_add:
       - SYS_ADMIN
-volumes:
-  frontend_react_data:
 
 networks:
   default:
