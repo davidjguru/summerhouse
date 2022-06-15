@@ -46,8 +46,7 @@ $ unzip summerhouse-1.0.0.zip
 $ cd summerhouse
 $ ddev start
 ```
-And the platoform will be mounted and deployed:  
-
+And the platform will be mounted and deployed. 
 
 ### Addresses // Resources
 
