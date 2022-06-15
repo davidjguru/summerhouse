@@ -7,8 +7,8 @@ ENV NODE_ENV development
 EXPOSE 3000
 WORKDIR /app
 COPY . . 
+ADD start.sh /app
+RUN chmod +x /app/start.sh
 
 # Start the app.
-ENTRYPOINT ["yarn"]
-CMD ["install"]
-CMD ["start"]
+CMD ["/app/start.sh"]
