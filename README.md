@@ -38,6 +38,12 @@ $ ddev start
 And the project will be loaded, configured, enabled and deployed in your local environment. You will see the main URLs opening in your browser.  
 Please, **remember:** Summer House is **only** for local development. It can contain some configs that can be unsecure in other environments.  
 
+
+https://user-images.githubusercontent.com/21089086/174301906-3142d3b7-b8fa-40bb-a8c6-6808d486f545.mp4
+
+
+
+
 You can also download the project from [the releases / tags area of the Github repository](https://github.com/davidjguru/summerhouse/releases), selecting the version and downloading the compressed folder. Then you only have to unpack the project and launch DDEV:  
 
 ```
