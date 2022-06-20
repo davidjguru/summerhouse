@@ -9,7 +9,5 @@ EXPOSE 3000
 RUN mkdir /app
 WORKDIR /app
 COPY . . 
-ADD start.sh /app/start.sh
-RUN chmod +x /app/start.sh
-RUN ./start.sh
-CMD ["chmod -R 777 ./node_modules"]
+RUN yarn install
+CMD ["yarn start"]
