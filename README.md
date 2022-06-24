@@ -3,14 +3,23 @@
 # Welcome to Summer House 
 Welcome to Summer House, a fully-dockerized environment for onboarding processes based in Decoupled / Headless Drupal.  
 
+--------------------------------
+* [1. What is Summer House](#1-what-is-summer-house)  
+* [2. Pre-requisites](#2-pre-requisites)  
+* [3. Installation and deploy](#3-installation-and-deploy)  
+* [4. Addresses // Resources](#4-addresses--resources)  
+* [5. Troubleshooting](#5-troubleshooting)  
+* [6. Useful Links](#6-useful-links)  
+* [7. Acknowledgments and Thanks](#7-acknowledgments-and-thanks)  
+---------------------------------
 
-### What is Summer House
+### 1. What is Summer House
 Summer House is a sandbox for Drupal Decoupled projects, generating **[boilerplate code](https://www.freecodecamp.org/news/whats-boilerplate-and-why-do-we-use-it-let-s-check-out-the-coding-style-guide-ac2b6c814ee7/)**, built for **training** purposes and focused on **[learning-by-doing](https://www.lifehack.org/898427/learning-by-doing)**. The project is **self-contained** and host environment **agnostic**.
 This project deploys a whole Decoupled Drupal platform on-the-fly with a lot of extra-resources, tools and configurations, but **only for local development**. You can use Summer House for **Onboarding processes**, workshops and training sessions. **Or just for fun**.  
 
 * See the wiki section for more detailed info: [summerhouse/wiki](https://github.com/davidjguru/summerhouse/wiki).  
 
-### Pre-requisites
+### 2. Pre-requisites
 You can use SummerHouse in Linux environments and specifically in Debian / Ubuntu. SummerHouse requires the next resources: [Git](https://git-scm.com/), [Docker](https://www.docker.com/get-started/), [Docker-Compose](https://docs.docker.com/compose/) and [DDEV](https://ddev.readthedocs.io/en/stable/).  
 
 **If you don't have the prerequisites installed in your host system** you can install the resources from a installer script created and committed to the repository. The [installer script is here](https://raw.githubusercontent.com/davidjguru/summerhouse/main/scripts/installing_docker_dockercompose_ddev).
@@ -26,7 +35,7 @@ $ ./installing_docker_dockercompose_ddev
 * [How To Install Docker Compose](https://www.digitalocean.com/community/tutorial_collections/how-to-install-docker-compose)  
 * [How to Install DDEV](https://www.digitalocean.com/community/tutorials/how-to-develop-a-drupal-9-website-on-your-local-machine-using-docker-and-ddev#option-2-mdash-installing-ddev-on-linux)  
 
-### Installation and deploy
+### 3. Installation and deploy
 
 You can install Summer House in just three steps, just by doing:  
 
@@ -48,7 +57,7 @@ $ ddev start
 ```
 And the platform will be mounted and deployed. 
 
-### Addresses // Resources
+### 4. Addresses // Resources
 
 Summer House will deploy a series of containers from an internal network connected by DDEV with external access from your browser: 
 
@@ -60,15 +69,25 @@ Summer House will deploy a series of containers from an internal network connect
 - **Portainer**: Graphic Interface for managing Containers, in http://summerhouse.ddev.site:9001
 - **Mailhog**: Email testing tool, in http://summerhouse.ddev.site:8025/
 
+### 5. Troubleshooting
+Some common problems have been identified. Check this section for quick interventions.  
 
-### Useful Links 
+### Free some ports
+```
+[error]  Drupal\Core\Config\ConfigImporterException: There were errors validating the config synchronization.
+Entities exist of type <em class="placeholder">Shortcut link</em> and <em class="placeholder">Shortcut set</em> <em class="placeholder">Default</em>. These entities need to be deleted before importing. in Drupal\Core\Config\ConfigImporter->validate() (line 750 of /var/www/html/backend_drupal/core/lib/Drupal/Core/Config/ConfigImporter.php).
+```
 
-* See the Issue Queue: [davidjguru/summerhouse/issues](https://github.com/davidjguru/summerhouse/issues)  
-* See the Work In Progress: [davidjguru/summerhouse/project](https://github.com/davidjguru/summerhouse/projects/1)  
-* See the related Milestones: [davidjguru/summerhouse/milestones](https://github.com/davidjguru/summerhouse/milestones)  
-* See the Documentation pages: [davidjguru/summerhouse/wiki](https://github.com/davidjguru/summerhouse/wiki)  
+More information on how to deal with more specific errors can be found here:  
+[summerhouse/wiki/troubleshooting](https://github.com/davidjguru/summerhouse/wiki/Troubleshooting).  
+### 6. Useful Links 
 
-### Acknowledgments and Thanks
+* See the Issue Queue: [summerhouse/issues](https://github.com/davidjguru/summerhouse/issues)  
+* See the Work In Progress: [summerhouse/project](https://github.com/davidjguru/summerhouse/projects/1)  
+* See the related Milestones: [summerhouse/milestones](https://github.com/davidjguru/summerhouse/milestones)  
+* See the Documentation pages: [summerhouse/wiki](https://github.com/davidjguru/summerhouse/wiki)  
+
+### 7. Acknowledgments and Thanks
 
 * Thanks to [Digitalist Sweden](https://www.digitalist.se/english) for the opportunity to improve the onboarding processes.  
 * Thanks to [Helena Nordenfelt](https://www.linkedin.com/in/helena-nordenfelt-4472184/) for giving me the chance to focus on this idea.  
