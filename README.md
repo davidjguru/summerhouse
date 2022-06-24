@@ -52,7 +52,7 @@ You can also download the project from [the releases / tags area of the Github r
 ```
 $ wget https://github.com/davidjguru/summerhouse/archive/refs/tags/v1.0.0.zip
 $ unzip summerhouse-1.0.0.zip
-$ cd summerhouse
+$ cd summerhouse-1.0.0/
 $ ddev start
 ```
 And the platform will be mounted and deployed. 
