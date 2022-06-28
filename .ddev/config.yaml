@@ -21,6 +21,7 @@ hooks:
     - exec-host: "([ ! -f ./.ddev/docker-compose.mkdocs.yaml ] && mv ./mkdocs/docker-compose.mkdocs.yaml ./.ddev/) || (echo 'A MkDocs service file has been located in your system.')"
     - exec-host: "(git clone https://github.com/davidjguru/summerhouse.wiki.git ./mkdocs/docs)"
     - exec-host: "cp -r ./images/assets/* ./frontend_react/src/assets/"
+    - exec-host: "sed -i '12s/restart: \"no\"/restart: \"always\"/' ./.ddev/docker-compose.portainer.yaml"
   post-start:
     - exec: sudo echo alias ll=\"ls -lhA\" >> ~/.bashrc
     # Resolve all dependencies by Composer in container.
