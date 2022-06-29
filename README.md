@@ -71,14 +71,18 @@ Summer House will deploy a series of containers from an internal network connect
 
 ### 5. Troubleshooting
 Some common problems have been identified. Check this section for quick interventions.  
+For more extended information on known bugs and their solutions, [visit the related wiki section](https://github.com/davidjguru/summerhouse/wiki/Troubleshooting).  
 
 ### Free some ports
+A fundamental aspect of deploying Summer House in your local environment (Linux, WSL) is the use of ports. Problems have been detected due to port blocking by other applications. This can cause DDEV start-up problems and lead to others problems during the installation process of the main website, you can get errors just like:  
 ```
 [error]  Drupal\Core\Config\ConfigImporterException: There were errors validating the config synchronization.
 Entities exist of type <em class="placeholder">Shortcut link</em> and <em class="placeholder">Shortcut set</em> <em class="placeholder">Default</em>. These entities need to be deleted before importing. in Drupal\Core\Config\ConfigImporter->validate() (line 750 of /var/www/html/backend_drupal/core/lib/Drupal/Core/Config/ConfigImporter.php).
 ```
 
-More information on how to deal with more specific errors can be found here:  
+DDEV operates with ports used by other resources, such as 80 or 443. Check that they are not in use (you do not have Apache running on your system).  
+
+**Remember**, more information on how to deal with more specific errors can be found here:  
 [summerhouse/wiki/troubleshooting](https://github.com/davidjguru/summerhouse/wiki/Troubleshooting).  
 ### 6. Useful Links 
 
@@ -90,7 +94,7 @@ More information on how to deal with more specific errors can be found here:
 ### 7. Acknowledgments and Thanks
 
 * Thanks to [Digitalist Sweden](https://www.digitalist.se/english) for the opportunity to improve the onboarding processes.  
-* Thanks to [Helena Nordenfelt](https://www.linkedin.com/in/helena-nordenfelt-4472184/) for giving me the chance to focus on this idea.  
-* Thanks to [Randy Fay](https://www.linkedin.com/in/randyfay/) for the amazing work with [DDEV](https://ddev.readthedocs.io/en/stable/) and [its community](https://github.com/drud/ddev-contrib).   
+* Thanks to [Helena Nordenfelt](https://www.linkedin.com/in/helena-nordenfelt-4472184/) for giving me the chance to focusing on this idea.  
+* Thanks to [Randy Fay](https://www.linkedin.com/in/randyfay/) for the amazing work in [DDEV](https://ddev.readthedocs.io/en/stable/) and [its community](https://github.com/drud/ddev-contrib).   
 * Thanks to [Pedro Cambra](https://www.linkedin.com/in/pcambra/) from [Cambrico](https://www.drupal.org/cambrico), for being a true mentor.   
   
