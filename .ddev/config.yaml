@@ -19,7 +19,7 @@ hooks:
     - exec-host: "([ ! -f ./.ddev/docker-compose.portainer.yaml ] && wget https://raw.githubusercontent.com/drud/ddev-contrib/master/docker-compose-services/portainer/docker-compose.portainer.yaml && mv docker-compose.portainer.yaml ./.ddev/) || (echo 'A portainer service file has been located in your system.')"
     - exec-host: "([ ! -f ./.ddev/docker-compose.frontend_react.yaml ] && mv ./frontend_react/docker-compose.frontend_react.yaml ./.ddev/) || (echo 'A frontend react service file has been located in your system.')"
     - exec-host: "([ ! -f ./.ddev/docker-compose.mkdocs.yaml ] && mv ./mkdocs/docker-compose.mkdocs.yaml ./.ddev/) || (echo 'A MkDocs service file has been located in your system.')"
-    - exec-host: "(git clone https://github.com/davidjguru/summerhouse.wiki.git ./mkdocs/docs)"
+    - exec-host: "([ -d ./mkdocs/docs ] && cd ./mkdocs/docs && git pull origin) || (git clone https://github.com/davidjguru/summerhouse.wiki.git ./mkdocs/docs)"
     - exec-host: "cp -r ./images/assets/* ./frontend_react/src/assets/"
     - exec-host: "sed -i '12s/restart: \"no\"/restart: \"always\"/' ./.ddev/docker-compose.portainer.yaml"
   post-start:
