@@ -1,0 +1,56 @@
+name: Summer House
+type: profile
+description: 'Custom Installation Profile for Summer House development.'
+core_version_requirement: '^8.8.0 || ^9 || ^10'
+
+distribution:
+  name: SummerHouse Distribution.
+
+dependencies:
+  - automated_cron
+  - block
+  - block_content
+  - breakpoint
+  - ckeditor
+  - color
+  - comment
+  - config
+  - contact
+  - contextual
+  - datetime
+  - dblog
+  - dynamic_page_cache
+  - editor
+  - field
+  - field_ui
+  - file
+  - filter
+  - help
+  - history
+  - image
+  - link
+  - menu_ui
+  - node
+  - options
+  - page_cache
+  - path
+  - quickedit
+  - rdf
+  - search
+  - shortcut
+  - system
+  - taxonomy
+  - text
+  - toolbar
+  - tour
+  - update
+  - user
+  - views_ui
+  - menu_link_content
+  - views
+
+themes:
+  - stable
+  - classy
+  - bartik
+  - seven
