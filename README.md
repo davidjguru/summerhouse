@@ -13,7 +13,6 @@ Welcome to Summer House, a fully-dockerized environment for onboarding processes
 * [7. Other Projects with similar natura](#7-other-projects-with-similar-natura)  
 * [8. Acknowledgments and Thanks](#8-acknowledgments-and-thanks)  
 ---------------------------------
-1
 ### 1. What is Summer House
 Summer House is a sandbox for Drupal Decoupled projects, generating **[boilerplate code](https://www.freecodecamp.org/news/whats-boilerplate-and-why-do-we-use-it-let-s-check-out-the-coding-style-guide-ac2b6c814ee7/)**, built for **training** purposes and focused on **[learning-by-doing](https://www.lifehack.org/898427/learning-by-doing)**. The project is **self-contained** and host environment **agnostic**.
 This project deploys a whole Decoupled Drupal platform on-the-fly with a lot of extra-resources, tools and configurations, but **only for local development**. You can use Summer House for **Onboarding processes**, workshops and training sessions. **Or just for fun**.  
@@ -99,7 +98,8 @@ Summer House may not be exactly what you're looking for, but it comes close. If 
 * [Decoupled Drupal 8 with GatsbyJS Frontend built over Docksal](https://github.com/docksal/boilerplate-drupal-gatsby)  
 * [Metadrop's Drupal Boilerplate built over Docker4Drupal](https://github.com/Metadrop/drupal-boilerplate)  
 * [Systemseed's Drupal ReactJS Boilerplate, built over Docker4Drupal](https://github.com/systemseed/drupal_reactjs_boilerplate)  
-* 
+  
+  
 ### 8. Acknowledgments and Thanks
 
 * Thanks to [Digitalist Sweden](https://www.digitalist.se/english) for the opportunity to improve the onboarding processes.  
