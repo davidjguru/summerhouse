@@ -10,9 +10,10 @@ Welcome to Summer House, a fully-dockerized environment for onboarding processes
 * [4. Addresses // Resources](#4-addresses--resources)  
 * [5. Troubleshooting](#5-troubleshooting)  
 * [6. Useful Links](#6-useful-links)  
-* [7. Acknowledgments and Thanks](#7-acknowledgments-and-thanks)  
+* [7. Other Projects with similar natura](#7-other-projects-with-similar-natura)  
+* [8. Acknowledgments and Thanks](#8-acknowledgments-and-thanks)  
 ---------------------------------
-
+1
 ### 1. What is Summer House
 Summer House is a sandbox for Drupal Decoupled projects, generating **[boilerplate code](https://www.freecodecamp.org/news/whats-boilerplate-and-why-do-we-use-it-let-s-check-out-the-coding-style-guide-ac2b6c814ee7/)**, built for **training** purposes and focused on **[learning-by-doing](https://www.lifehack.org/898427/learning-by-doing)**. The project is **self-contained** and host environment **agnostic**.
 This project deploys a whole Decoupled Drupal platform on-the-fly with a lot of extra-resources, tools and configurations, but **only for local development**. You can use Summer House for **Onboarding processes**, workshops and training sessions. **Or just for fun**.  
@@ -53,7 +54,7 @@ You can also download the project from [the releases / tags area of the Github r
 $ wget https://github.com/davidjguru/summerhouse/archive/refs/tags/v1.0.0.zip
 $ unzip summerhouse-1.0.0.zip
 $ cd summerhouse-1.0.0/
-$ ddev start
+summerhouse-1.0.0$ ddev start
 ```
 And the platform will be mounted and deployed. 
 
@@ -73,7 +74,7 @@ Summer House will deploy a series of containers from an internal network connect
 Some common problems have been identified. Check this section for quick interventions.  
 For more extended information on known bugs and their solutions, [visit the related wiki section](https://github.com/davidjguru/summerhouse/wiki/Troubleshooting).  
 
-### Free some ports
+#### Free some ports
 A fundamental aspect of deploying Summer House in your local environment (Linux, WSL) is the use of ports. Problems have been detected due to port blocking by other applications. This can cause DDEV start-up problems and lead to others problems during the installation process of the main website, you can get errors just like:  
 ```
 [error]  Drupal\Core\Config\ConfigImporterException: There were errors validating the config synchronization.
@@ -91,7 +92,15 @@ DDEV operates with ports used by other resources, such as 80 or 443. Check that 
 * See the related Milestones: [summerhouse/milestones](https://github.com/davidjguru/summerhouse/milestones)  
 * See the Documentation pages: [summerhouse/wiki](https://github.com/davidjguru/summerhouse/wiki)  
 
-### 7. Acknowledgments and Thanks
+### 7. Other projects with similar natura  
+
+Summer House may not be exactly what you're looking for, but it comes close. If you want to check out other projects that might be closer to your needs, you can try the cases in the following list:  
+
+* [Decoupled Drupal 8 with GatsbyJS Frontend built over Docksal](https://github.com/docksal/boilerplate-drupal-gatsby)  
+* [Metadrop's Drupal Boilerplate built over Docker4Drupal](https://github.com/Metadrop/drupal-boilerplate)  
+* [Systemseed's Drupal ReactJS Boilerplate, built over Docker4Drupal](https://github.com/systemseed/drupal_reactjs_boilerplate)  
+* 
+### 8. Acknowledgments and Thanks
 
 * Thanks to [Digitalist Sweden](https://www.digitalist.se/english) for the opportunity to improve the onboarding processes.  
 * Thanks to [Helena Nordenfelt](https://www.linkedin.com/in/helena-nordenfelt-4472184/) for giving me the chance to focusing on this idea.  
