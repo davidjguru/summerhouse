@@ -4,7 +4,8 @@ description: 'Custom Installation Profile for Summer House development.'
 core_version_requirement: '^8.8.0 || ^9 || ^10'
 
 distribution:
-  name: SummerHouse Distribution.
+  name: Summer House.
+  langcode: en
 
 dependencies:
   - automated_cron
