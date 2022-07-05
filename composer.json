@@ -69,7 +69,8 @@
         "allow-plugins": {
             "composer/installers": true,
             "drupal/core-composer-scaffold": true,
-            "drupal/core-project-message": true
+            "drupal/core-project-message": true,
+            "phpro/grumphp": true
         }
     },
     "scripts": {
@@ -133,5 +134,8 @@
                 "      composer remove drupal/core-project-message"
             ]
         }
+    },
+    "require-dev": {
+        "phpro/grumphp": "^1.5"
     }
 }
