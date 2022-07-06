@@ -13,7 +13,7 @@ jobs:
         run: |
           cd ci
           composer require --dev squizlabs/php_codesniffer --with-all-dependencies
-          composer require --dev drupal/coder --with-all-dependencies
+          composer require --dev drupal/coder:8.3.13 --with-all-dependencies
           composer require --dev dealerdirect/phpcodesniffer-composer-installer
           composer config --no-plugins allow-plugins.dealerdirect/phpcodesniffer-composer-installer true
 
