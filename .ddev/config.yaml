@@ -24,6 +24,9 @@ hooks:
     - exec-host: "sed -i '12s/restart: \"no\"/restart: \"always\"/' ./.ddev/docker-compose.portainer.yaml"
   post-start:
     - exec: sudo echo alias ll=\"ls -lhA\" >> ~/.bashrc
+    - exec: sudo echo alias drupalcs="phpcs --standard=Drupal --extensions='php,module,inc,install,test,profile,theme,css,info,txt,md,yml'" >> ~/.bashrc
+    - exec: sudo echo  alias drupalcsp="phpcs --standard=DrupalPractice --extensions='php,module,inc,install,test,profile,theme,css,info,txt,md,yml'" >> ~/.bashrc
+    - exec: sudo echo alias drupalcbf="phpcbf --standard=Drupal --extensions='php,module,inc,install,test,profile,theme,css,info,txt,md,yml'" >> ~/.bashrc
     # Resolve all dependencies by Composer in container.
     - composer: install 
     # Install Drupal after start if not installed already.
