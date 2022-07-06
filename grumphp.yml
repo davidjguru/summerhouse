@@ -1,35 +1,43 @@
 # grumphp.yml
 grumphp:
-    tasks:
-        phpcs:
-            standard: 
-              - vendor/drupal/coder/coder_sniffer/Drupal
-              - vendor/drupal/coder/coder_sniffer/DrupalPractice
-            whitelist_patterns: 
-            - /^backend_drupal\/modules\/contrib\/(.*)/
-            ignore_patterns: 
-              - .ddev/
-              - .github/
-              - .settings/
-              - frontend_react/
-              - images/
-              - mkdocs/
-              - scripts/
-              - vendor/
-              - grumphp.yml
-            severity: ~
-            error_severity: ~
-            warning_severity: ~
-            tab_width: ~
-            report: full
-            report_width: ~
-            encoding: ~
-            sniffs: []
-            triggered_by: 
-              - php
-              - module
-              - inc
-              - install
-              - test
-              - profile
-            exclude: []
+  git_hook_variables:
+    EXEC_GRUMPHP_COMMAND: ddev php
+  ascii:
+    failed: .git-files/port.txt
+    succeeded: .git-files/ok.txt
+  parallel:
+    enabled: true
+    max_workers: 32
+  tasks:
+    phpcs:
+      standard: 
+        - vendor/drupal/coder/coder_sniffer/Drupal
+        - vendor/drupal/coder/coder_sniffer/DrupalPractice
+      whitelist_patterns: 
+        - /^backend_drupal\/modules\/contrib\/(.*)/
+      ignore_patterns: 
+        - .ddev/
+        - .github/
+        - .settings/
+        - frontend_react/
+        - images/
+        - mkdocs/
+        - scripts/
+        - vendor/
+        - grumphp.yml
+      severity: ~
+      error_severity: ~
+      warning_severity: ~
+      tab_width: ~
+      report: full
+      report_width: ~
+      encoding: ~
+      sniffs: []
+      triggered_by: 
+          - php
+          - module
+          - inc
+          - install
+          - test
+          - profile
+      exclude: []
