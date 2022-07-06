@@ -51,14 +51,15 @@
         "composer/installers": "^1.9",
         "d3/d3": "^3.5",
         "drupal/admin_toolbar": "^3.1",
-        "drupal/coder": "^8.3",
+        "drupal/coder": "8.3.13",
         "drupal/core-composer-scaffold": "^9.3",
         "drupal/core-project-message": "^9.3",
         "drupal/core-recommended": "^9.3",
         "drupal/devel": "^4.1",
         "drupal/graphql": "^4.3",
         "drush/drush": "^11.0",
-        "highlightjs/highlightjs": "^11.2"
+        "highlightjs/highlightjs": "^11.2",
+        "slevomat/coding-standard": "^7.0"
     },
     "conflict": {
         "drupal/drupal": "*"
