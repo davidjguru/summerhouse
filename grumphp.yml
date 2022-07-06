@@ -29,4 +29,7 @@ grumphp:
               - php
               - module
               - inc
+              - install
+              - test
+              - profile
             exclude: []
