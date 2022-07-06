@@ -12,8 +12,9 @@ jobs:
       - name: Install PHP Code Sniffer
         run: |
           cd ci
-          yes| composer require --dev --dev squizlabs/php_codesniffer --with-all-dependencies
-          yes| composer require --dev drupal/coder --with-all-dependencies
+          y| composer require --dev squizlabs/php_codesniffer --with-all-dependencies
+          y| composer require --dev dealerdirect/phpcodesniffer-composer-installer
+          y| composer require --dev drupal/coder --with-all-dependencies
 
       - name: Check coding standards
         run: |
