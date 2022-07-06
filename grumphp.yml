@@ -10,7 +10,9 @@ grumphp:
     max_workers: 32
   tasks:
     git_commit_message:
+      allow_empty_message: false
       enforce_no_subject_trailing_period: true
+      enforce_no_subject_punctuations: true
       max_subject_width: 130
       case_insensitive: false
       enforce_capitalized_subject: false
@@ -20,7 +22,7 @@ grumphp:
         - vendor/drupal/coder/coder_sniffer/Drupal
         - vendor/drupal/coder/coder_sniffer/DrupalPractice
       whitelist_patterns: 
-        - /^backend_drupal\/modules\/contrib\/(.*)/
+        - /^backend_drupal\/modules\/custom\/(.*)/
       ignore_patterns: 
         - "#^.ddev/#"
         - "#^.github/#"
