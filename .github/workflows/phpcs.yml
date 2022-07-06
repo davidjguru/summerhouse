@@ -1,0 +1,21 @@
+name: PHP Code Sniffer
+
+on: pull_request
+
+jobs:
+  phpcs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install PHP Code Sniffer
+        run: |
+          cd ci
+          yes| composer require --dev --dev squizlabs/php_codesniffer --with-all-dependencies
+          yes| composer require --dev drupal/coder --with-all-dependencies
+
+      - name: Check coding standards
+        run: |
+          cd ci
+          vendor/bin/phpcs
