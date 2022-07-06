@@ -14,9 +14,10 @@ jobs:
           cd ci
           composer require --dev squizlabs/php_codesniffer --with-all-dependencies
           composer require --dev drupal/coder --with-all-dependencies
-          yes| composer require --dev dealerdirect/phpcodesniffer-composer-installer
+          composer require --dev dealerdirect/phpcodesniffer-composer-installer
+          composer config --no-interaction allow-plugins.dealerdirect/phpcodesniffer-composer-installer true
 
       - name: Check coding standards
         run: |
           cd ci
-          vendor/squizlabs/bin/phpcs
+          vendor/bin/phpcs
