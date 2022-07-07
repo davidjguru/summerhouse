@@ -1,14 +1,17 @@
-name: PHP Code Review
+name: PHP Code Review By Pull Request
 on: [pull_request]
 jobs:
   check-drupal-code-standards:
     runs-on: ubuntu-latest
     steps:
       - name: Cloning Code From Repository
+        run: echo "PHPCS - 1. Cloning Code from Repository"
         uses: actions/checkout@v3
       - name: Installing PHP Code Sniffer Resources
         run: |
+          echo "PHPCS - 2. Moving to CI Folder"
           cd ci
+          echo "PHPCS - 3. Installing Composer Dependencies"
           composer require --dev squizlabs/php_codesniffer --with-all-dependencies
           composer require --dev drupal/coder:8.3.13 --with-all-dependencies
           composer require --dev dealerdirect/phpcodesniffer-composer-installer
@@ -16,5 +19,29 @@ jobs:
 
       - name: Checking Drupal Coding Standards
         run: |
-          cd ci
+          echo "PHPCS - 4. Checking Drupal Coding Standards"
           vendor/bin/phpcs --standard="Drupal, DrupalPractice" --extensions="php,module,inc,install,test,profile,theme,info" ../backend_drupal/modules/custom
+  generate-phpstan-report:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Cloning Code from Repository
+        run: echo "PHPSTAN - 1. Cloning Code from Repository"
+        uses: actions/checkout@v3
+      - name: Setup for PHP 8.0
+        run: echo "PHPSTAN - 2. Setting Up PHP"
+        uses: shivamathur/setup-php@v2
+        with: 
+          php-version: 8.0
+      - name: Installing PHPStan Library
+        run: |
+          echo "PHPSTAN - 3. Moving to CI Folder"
+          cd ci
+          echo "PHPSTAN - 4. Installing PHPStan through Composer"
+          composer require --dev phpstan/phpstan --with-all-dependencies
+      - name: Analysing Drupal codebase
+        run: |
+          echo "PHPSTAN - 5. Running codebase review with PHPSt"
+          vendor/bin/phpstan analyse ../backend_drupal/modules/custom 
+          
+          
+          
