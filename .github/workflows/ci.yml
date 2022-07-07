@@ -4,8 +4,8 @@ jobs:
   check-drupal-code-standards:
     runs-on: ubuntu-latest
     steps:
+      - run: echo "PHPCS - 1. Cloning Code from Repository"
       - name: Cloning Code From Repository
-        run: echo "PHPCS - 1. Cloning Code from Repository"
         uses: actions/checkout@v3
       - name: Installing PHP Code Sniffer Resources
         run: |
@@ -24,11 +24,11 @@ jobs:
   generate-phpstan-report:
     runs-on: ubuntu-latest
     steps: 
+      - run: echo "PHPSTAN - 1. Cloning Code from Repository"
       - name: Cloning Code from Repository
-        run: echo "PHPSTAN - 1. Cloning Code from Repository"
         uses: actions/checkout@v3
+      - run: echo "PHPSTAN - 2. Setting Up PHP"
       - name: Setup for PHP 8.0
-        run: echo "PHPSTAN - 2. Setting Up PHP"
         uses: shivamathur/setup-php@v2
         with: 
           php-version: 8.0
