@@ -19,6 +19,7 @@ jobs:
 
       - name: Checking Drupal Coding Standards
         run: |
+          cd ci
           echo "PHPCS - 4. Checking Drupal Coding Standards"
           vendor/bin/phpcs --standard="Drupal, DrupalPractice" --extensions="php,module,inc,install,test,profile,theme,info" ../backend_drupal/modules/custom
   generate-phpstan-report:
@@ -29,7 +30,7 @@ jobs:
         uses: actions/checkout@v3
       - run: echo "PHPSTAN - 2. Setting Up PHP"
       - name: Setup for PHP 8.0
-        uses: shivamathur/setup-php@v2
+        uses: shivammathur/setup-php@v2
         with: 
           php-version: 8.0
       - name: Installing PHPStan Library
