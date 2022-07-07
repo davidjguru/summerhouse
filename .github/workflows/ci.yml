@@ -7,21 +7,17 @@ jobs:
       - run: echo "PHPCS - 1. Cloning Code from Repository"
       - name: Cloning Code From Repository
         uses: actions/checkout@v3
-      - name: Installing PHP Code Sniffer Resources
+      - name: Installing Resources and Checking code standars
         run: |
           echo "PHPCS - 2. Moving to CI Folder"
           cd ci
-          echo "PHPCS - 3. Installing Composer Dependencies"
+          echo "PHPCS - 3. Installing Composer Dependencies and Checking Drupal Codebase"
           composer require --dev squizlabs/php_codesniffer --with-all-dependencies
           composer require --dev drupal/coder:8.3.13 --with-all-dependencies
           composer require --dev dealerdirect/phpcodesniffer-composer-installer
           composer config --no-plugins allow-plugins.dealerdirect/phpcodesniffer-composer-installer true
-
-      - name: Checking Drupal Coding Standards
-        run: |
-          cd ci
           echo "PHPCS - 4. Checking Drupal Coding Standards"
-          vendor/bin/phpcs --standard="Drupal, DrupalPractice" --extensions="php,module,inc,install,test,profile,theme,info" ../backend_drupal/modules/custom
+          ./vendor/bin/phpcs --standard="Drupal, DrupalPractice" --extensions="php,module,inc,install,test,profile,theme,info" ../backend_drupal/modules/custom
   generate-phpstan-report:
     runs-on: ubuntu-latest
     steps: 
