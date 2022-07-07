@@ -35,7 +35,7 @@ jobs:
           cd ci
           echo "PHPSTAN - 4. Installing PHPStan through Composer"
           composer require --dev phpstan/phpstan --with-all-dependencies
-          echo "PHPSTAN - 5. Running codebase review with PHPSt"
+          echo "PHPSTAN - 5. Running codebase review with PHPStan"
           ./vendor/bin/phpstan analyse ../backend_drupal/modules/custom 
           
           
