@@ -6,7 +6,6 @@ jobs:
     steps:
       - name: Installing PHP Code Sniffer Resources
         run: |
-          cd ci
           composer global require --dev squizlabs/php_codesniffer --with-all-dependencies
           composer global require --dev drupal/coder:8.3.13 --with-all-dependencies
           composer global require --dev dealerdirect/phpcodesniffer-composer-installer
