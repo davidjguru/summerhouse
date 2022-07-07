@@ -4,15 +4,17 @@ jobs:
   check-drupal-code-standards:
     runs-on: ubuntu-latest
     steps:
-      - name: Installing PHP Code Sniffer Resources
-        run: |
-          composer global require --dev squizlabs/php_codesniffer --with-all-dependencies
-          composer global require --dev drupal/coder:8.3.13 --with-all-dependencies
-          composer global require --dev dealerdirect/phpcodesniffer-composer-installer
-          composer config --no-plugins allow-plugins.dealerdirect/phpcodesniffer-composer-installer true
       - name: Cloning Code From Repository
         uses: actions/checkout@v3
+      - name: Installing PHP Code Sniffer Resources
+        run: |
+          cd ci
+          composer require --dev squizlabs/php_codesniffer --with-all-dependencies
+          composer require --dev drupal/coder:8.3.13 --with-all-dependencies
+          composer require --dev dealerdirect/phpcodesniffer-composer-installer
+          composer config --no-plugins allow-plugins.dealerdirect/phpcodesniffer-composer-installer true
+
       - name: Checking Drupal Coding Standards
         run: |
           cd ci
-          ~/.composer/vendor/bin/phpcs -standard="Drupal, DrupalPractice" --extensions="php,module,inc,install,test,profile,theme,info" ../backend_drupal/modules/custom
+          vendor/bin/phpcs -standard="Drupal, DrupalPractice" --extensions="php,module,inc,install,test,profile,theme,info" ../backend_drupal/modules/custom
