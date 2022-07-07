@@ -29,16 +29,14 @@ jobs:
         uses: shivammathur/setup-php@v2
         with: 
           php-version: 8.0
-      - name: Installing PHPStan Library
+      - name: Installing PHPStan Library and Running analyses
         run: |
           echo "PHPSTAN - 3. Moving to CI Folder"
           cd ci
           echo "PHPSTAN - 4. Installing PHPStan through Composer"
           composer require --dev phpstan/phpstan --with-all-dependencies
-      - name: Analysing Drupal codebase
-        run: |
           echo "PHPSTAN - 5. Running codebase review with PHPSt"
-          vendor/bin/phpstan analyse ../backend_drupal/modules/custom 
+          ./vendor/bin/phpstan analyse ../backend_drupal/modules/custom 
           
           
           
