@@ -49,6 +49,7 @@
     ],
     "require": {
         "composer/installers": "^1.9",
+        "cweagans/composer-patches": "^1.7",
         "d3/d3": "^3.5",
         "drupal/admin_toolbar": "^3.1",
         "drupal/core-composer-scaffold": "^9.3",
@@ -69,7 +70,10 @@
         "allow-plugins": {
             "composer/installers": true,
             "drupal/core-composer-scaffold": true,
-            "drupal/core-project-message": true
+            "drupal/core-project-message": true,
+            "phpro/grumphp": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "cweagans/composer-patches": true
         }
     },
     "scripts": {
@@ -133,5 +137,13 @@
                 "      composer remove drupal/core-project-message"
             ]
         }
+    },
+    "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.2",
+        "drupal/coder": "^8.3",
+        "phpro/grumphp": "^1.5",
+        "phpstan/phpstan": "^1.8",
+        "slevomat/coding-standard": "^7.0",
+        "squizlabs/php_codesniffer": "^3.7"
     }
 }
