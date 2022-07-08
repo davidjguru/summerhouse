@@ -16,6 +16,8 @@ grumphp:
       max_subject_width: 130
       case_insensitive: false
       enforce_capitalized_subject: false
+    phpcpd: ~ 
+    phpstan: ~
     phpcs:
       encoding: utf-8
       standard: 
