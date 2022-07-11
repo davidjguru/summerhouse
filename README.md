@@ -6,7 +6,7 @@ Welcome to Summer House, a fully-dockerized environment for onboarding processes
 --------------------------------
 * [1. What is Summer House](#1-what-is-summer-house)  
 * [2. Pre-requisites](#2-pre-requisites)  
-* [3. Installation and deploy](#3-installation-and-deploy)  
+* [3. Install // Uninstall](#3-install--uninstall)  
 * [4. Addresses // Resources](#4-addresses--resources)  
 * [5. Troubleshooting](#5-troubleshooting)  
 * [6. Useful Links](#6-useful-links)  
@@ -40,9 +40,9 @@ $ ./installing_docker_dockercompose_ddev
 You can install Summer House in just three steps, just by doing:  
 
 ```bash
-$ git clone https://github.com/davidjguru/summerhouse.git # Get a local copy.
-$ cd summerhouse # Move to the folder.
-summerhouse$ ddev start # Run the DDEV build up.
+$ git clone https://github.com/davidjguru/summerhouse.git #Get a local copy.
+$ cd summerhouse #Move to the folder.
+summerhouse$ ddev start #Run the DDEV build up.
 ```
 And the project will be loaded, configured, enabled and deployed in your local environment. You will see the main URLs opening in your browser.  
 Please, **remember:** Summer House is **only** for local development. It can contain some configs that can be unsecure in other environments.  
@@ -63,10 +63,10 @@ In order to execute a complete cleaning of your Summer House installation you ca
 
 ```
 $ cd summerhouse
-summerhouse$ yes| ddev delete -O # Delete the DDEV register for Summer House.
-summerhouse$ ./scripts/utilities/clean_all_docker_related_resources.sh # Will destroy all docker resources.
+summerhouse$ yes| ddev delete -O #Delete the DDEV register for Summer House.
+summerhouse$ ./scripts/utilities/clean_all_docker_related_resources.sh #Will destroy all docker resources.
 summerhouse$ cd ..
-$ sudo rm -rf summerhouse # Delete all the codebase. 
+$ sudo rm -rf summerhouse #Delete all the codebase. 
 ```
 
 
