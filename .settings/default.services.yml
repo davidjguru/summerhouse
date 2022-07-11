@@ -35,9 +35,9 @@ parameters:
     - rtsp
   cors.config:
     enabled: true
-    allowedHeaders: ['x-csrf-token','authorization','content-type','accept','origin','x-requested-with']
+    allowedHeaders: ['x-csrf-token','authorization','content-type','accept','origin','x-requested-with', 'access-control-allow-origin','x-allowed-header','*']
     allowedMethods: ['*']
     allowedOrigins: ['*']
-    exposedHeaders: true
+    exposedHeaders: false
     maxAge: false
     supportsCredentials: true

@@ -29,4 +29,5 @@ chmod 777 backend_drupal/sites/default/settings.ddev.php
 # Prepare the services file for installation
 echo "Copying services to default folder."
 cp .settings/default.services.yml backend_drupal/sites/default/services.yml
+[ ! -e backend_drupal/sites/default/default.services.yml ] || rm backend_drupal/sites/default/default.services.yml
 chmod 777 backend_drupal/sites/default/services.yml
