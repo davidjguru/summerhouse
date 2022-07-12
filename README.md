@@ -49,7 +49,7 @@ Please, **remember:** Summer House is **only** for local development. It can con
 
 You can also download the project from [the releases / tags area of the Github repository](https://github.com/davidjguru/summerhouse/releases), selecting the version and downloading the compressed folder. Then you only have to unpack the project and launch DDEV:  
 
-```
+```bash 
 $ wget https://github.com/davidjguru/summerhouse/archive/refs/tags/v1.0.0.zip
 $ unzip summerhouse-1.0.0.zip
 $ cd summerhouse-1.0.0/
@@ -61,7 +61,7 @@ And the platform will be mounted and deployed.
 
 In order to execute a complete cleaning of your Summer House installation you can do the next steps.  
 
-```
+```bash
 $ cd summerhouse
 summerhouse$ yes| ddev delete -O #Delete the DDEV register for Summer House.
 summerhouse$ ./scripts/utilities/clean_all_docker_related_resources.sh #Will destroy all docker resources.
