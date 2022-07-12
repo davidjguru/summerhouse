@@ -19,6 +19,7 @@
 # Prepare the main basic settings file for installation
 echo "Copying default.settings.php if no settings.php exists."
 cp .settings/default.settings.php backend_drupal/sites/default/settings.php
+[ ! -e backend_drupal/sites/default/default.settings.php ] || rm backend_drupal/sites/defaultdefault.settings.php
 chmod 777 backend_drupal/sites/default/settings.php
 
 # Prepare the secondary settings file for installation
