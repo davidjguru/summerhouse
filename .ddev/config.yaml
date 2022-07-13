@@ -31,7 +31,7 @@ hooks:
     - composer: install 
     # Install Drupal after start if not installed already.
     - exec: "(drush status bootstrap | grep -q Successful) || (drush site-install --existing-config --site-name=SummerHouse --account-name=admin --account-pass=admin --db-url=mysql://db:db@db/db -y && drush user-add-role 'administrator' admin)"
-    - exec: "yes |ddev drush cset system.site uuid $(head -n 1 ./.settings/salt.txt)"
+    - exec: "yes | drush cset system.site uuid $(head -n 1 ./.settings/salt.txt)"
     - exec: "drush cr"
     # Generate 10 new nodes with type article.
     - exec: "drush genc --bundles=article 10"
