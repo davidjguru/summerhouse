@@ -82,6 +82,11 @@
         ]
     },
     "extra": {
+        "patches": {
+          "drupal/core": {
+            "Allow an install hook in profiles installing from configuration": "https://www.drupal.org/files/issues/2018-11-27/2982052-22.patch"
+          }
+        },
         "drupal-scaffold": {
             "locations": {
                 "web-root": "backend_drupal/"
