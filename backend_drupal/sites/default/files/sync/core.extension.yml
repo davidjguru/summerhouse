@@ -44,7 +44,6 @@ module:
   rdf: 0
   search: 0
   shortcut: 0
-  standard: 0
   system: 0
   taxonomy: 0
   text: 0
@@ -56,5 +55,6 @@ module:
   views_ui: 0
   webprofiler: 0
   views: 10
+  minimal: 1000
 theme: {  }
-profile: standard
+profile: minimal
