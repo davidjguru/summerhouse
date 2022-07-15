@@ -1,3 +1,15 @@
+favicon:
+  mimetype: image/png
+  path: 'public://summerhouse_icon_1_512x512.png'
+  use_default: false
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true
+logo:
+  path: 'public://summerhouse_logo.png'
+  use_default: false
 third_party_settings:
   shortcut:
     module_link: true
