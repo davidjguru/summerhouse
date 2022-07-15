@@ -21,6 +21,7 @@ hooks:
     - exec-host: "([ ! -f ./.ddev/docker-compose.mkdocs.yaml ] && mv ./mkdocs/docker-compose.mkdocs.yaml ./.ddev/) || (echo 'A MkDocs service file has been located in your system.')"
     - exec-host: "([ -d ./mkdocs/docs ] && cd ./mkdocs/docs && git pull origin) || (git clone https://github.com/davidjguru/summerhouse.wiki.git ./mkdocs/docs)"
     - exec-host: "cp -r ./images/assets/* ./frontend_react/src/assets/"
+    - exec-host: "cp -r ./images/assets/* ./backend_drupal/sites/default/files/"
     - exec-host: "sed -i '12s/restart: \"no\"/restart: \"always\"/' ./.ddev/docker-compose.portainer.yaml"
   post-start:
     - exec: sudo echo alias ll=\"ls -lhA\" >> ~/.bashrc
