@@ -56,5 +56,7 @@ module:
   webprofiler: 0
   views: 10
   minimal: 1000
-theme: {  }
+theme:
+  bartik: 0
+  claro: 0
 profile: minimal
