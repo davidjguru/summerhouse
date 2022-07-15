@@ -1,22 +1,22 @@
-uuid: cdef0ee1-570f-484d-a1f4-30234efbe336
+uuid: 8a46f1f0-a22b-454c-8778-677065e5d2ef
 langcode: en
 status: true
 dependencies:
   theme:
     - bartik
 _core:
-  default_config_hash: Qf2BoIzd9py5AYXZj8fJzCYDyVk1-AWXcu-AqQeDZKA
-id: bartik_local_tasks
+  default_config_hash: 2L0geP-ixCbCkEpW6BVF6H7vDUZN4ea07_Y9CociQm4
+id: bartik_secondary_local_tasks
 theme: bartik
-region: content
-weight: -40
+region: header
+weight: 0
 provider: null
 plugin: local_tasks_block
 settings:
   id: local_tasks_block
-  label: Tabs
+  label: 'Secondary tabs'
   label_display: '0'
   provider: core
-  primary: true
+  primary: false
   secondary: true
 visibility: {  }

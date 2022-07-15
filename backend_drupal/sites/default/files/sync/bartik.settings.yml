@@ -1,9 +1,6 @@
-_core:
-  default_config_hash: 9rAU4Pku7eMBQxauQqAgjzlcicFZ2As6zEa6zvTlCB8
 favicon:
   mimetype: image/png
-  path: 'public://summerhouse_icon_1_512x512_0.png'
-  url: ''
+  path: 'public://summerhouse_icon_1_512x512.png'
   use_default: false
 features:
   comment_user_picture: true
@@ -11,6 +8,5 @@ features:
   favicon: true
   node_user_picture: true
 logo:
-  path: 'public://summerhouse_logo_0.png'
-  url: ''
+  path: 'public://summerhouse_logo_reduced.png'
   use_default: false

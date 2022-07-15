@@ -21,6 +21,7 @@ hooks:
     - exec-host: "([ ! -f ./.ddev/docker-compose.mkdocs.yaml ] && mv ./mkdocs/docker-compose.mkdocs.yaml ./.ddev/) || (echo 'A MkDocs service file has been located in your system.')"
     - exec-host: "([ -d ./mkdocs/docs ] && cd ./mkdocs/docs && git pull origin) || (git clone https://github.com/davidjguru/summerhouse.wiki.git ./mkdocs/docs)"
     - exec-host: "cp -r ./images/assets/* ./frontend_react/src/assets/"
+    - exec-host: "cp -r ./images/assets/* ./backend_drupal/sites/default/files/"
     - exec-host: "sed -i '12s/restart: \"no\"/restart: \"always\"/' ./.ddev/docker-compose.portainer.yaml"
   post-start:
     - exec: sudo echo alias ll=\"ls -lhA\" >> ~/.bashrc
@@ -30,12 +31,8 @@ hooks:
     # Resolve all dependencies by Composer in container.
     - composer: install 
     # Install Drupal after start if not installed already.
-    - exec: "(drush status bootstrap | grep -q Successful) || (drush site-install --site-name=SummerHouse --account-name=admin --account-pass=admin --db-url=mysql://db:db@db/db -y && drush user-add-role 'administrator' admin)"
-    - exec-host: "yes |ddev drush cset system.site uuid $(head -n 1 ./.settings/salt.txt)"
-    - exec: "drush cr"
-    - exec: "([ $(drush eval 'print_r(array_keys(\\Drupal::entityTypeManager()->getDefinitions()));' | grep shortcut -c) -gt 0 ] && (drush entity:delete shortcut_set) || (echo 'No shortcut entities were found in your system.'))"
-    - exec: "drush pmu shortcut -y"
-    - exec: "drush cim -y"
+    - exec: "(drush status bootstrap | grep -q Successful) || (drush site-install --existing-config --site-name=SummerHouse --account-name=admin --account-pass=admin --db-url=mysql://db:db@db/db -y && drush user-add-role 'administrator' admin)"
+    - exec: "yes | drush cset system.site uuid $(head -n 1 ./.settings/salt.txt)"
     - exec: "drush cr"
     # Generate 10 new nodes with type article.
     - exec: "drush genc --bundles=article 10"
