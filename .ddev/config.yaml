@@ -22,7 +22,7 @@ hooks:
     - exec-host: "([ -d ./mkdocs/docs ] && cd ./mkdocs/docs && git pull origin) || (git clone https://github.com/davidjguru/summerhouse.wiki.git ./mkdocs/docs)"
     - exec-host: "cp -r ./images/assets/* ./frontend_react/src/assets/"
     - exec-host: "cp -r ./images/assets/* ./backend_drupal/sites/default/files/"
-    - exec-host: "sed -i '12s/restart: \"no\"/restart: \"always\"/' ./.ddev/docker-compose.portainer.yaml"
+    - exec-host: "sed -i '12s/restart: \"no\"/restart: \"on-failure\"/' ./.ddev/docker-compose.portainer.yaml"
   post-start:
     - exec: sudo echo alias ll=\"ls -lhA\" >> ~/.bashrc
     - exec: sudo echo alias drupalcs="phpcs --standard=Drupal --extensions='php,module,inc,install,test,profile,theme,css,info,txt,md,yml'" >> ~/.bashrc
