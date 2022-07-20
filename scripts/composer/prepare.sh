@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # -*- ENCODING: UTF-8 -*-
 #
 #
@@ -34,7 +34,7 @@ if [ -d "$DIRECTORY_2" ] && [ ! -z "$(ls -A "$DIRECTORY_2")" ]
 fi
 
 # Check if the Drupal installation was enabled previously.
-if [ "$(drush status bootstrap)" = "Drupal Bootstrap: Successful" ]
+if [ "$(vendor/bin/drush status bootstrap)" == "Drupal bootstrap : Successful " ]
   then
     INSTALLED=true
 fi
@@ -48,18 +48,18 @@ elif [ "$VENDOR" = true ] && [ "$CONTRIB" = true ] && [ "$INSTALLED" = false ]
   ## Second: Running Summer House after deletion of containers maintaining codebase.
   then
     echo "Folders for /modules/contrib and /vendor already exists but Drupal installation is not enabled, drush site:install will be executed."
-    drush site-install --existing-config --site-name=SummerHouse --account-name=admin --account-pass=admin --db-url=mysql://db:db@db/db -y
-    drush user-add-role 'administrator' admin
-    yes |drush cset system.site uuid $(head -n 1 ./.settings/salt.txt)
-    drush cr
-    drush genc --bundles=article 10
+    vendor/bin/drush site-install --existing-config --site-name=SummerHouse --account-name=admin --account-pass=admin --db-url=mysql://db:db@db/db -y
+    vendor/bin/drush user-add-role 'administrator' admin
+    yes 2>/dev/null |vendor/bin/drush cset system.site uuid $(head -n 1 .settings/salt.txt)
+    vendor/bin/drush cr
+    vendor/bin/drush genc --bundles=article 10
 else
   ## Third: First time Installation running ddev start.
   echo "Folders for /modules/contrib and /vendor doesn't exists and your Drupal installation is not enabled, composer install and drush will be executed."
   composer install 
-  drush site-install --existing-config --site-name=SummerHouse --account-name=admin --account-pass=admin --db-url=mysql://db:db@db/db -y
-  drush user-add-role 'administrator' admin
-  yes |drush cset system.site uuid $(head -n 1 ./.settings/salt.txt)
-  drush cr
-  drush genc --bundles=article 10
+  vendor/bin/drush site-install --existing-config --site-name=SummerHouse --account-name=admin --account-pass=admin --db-url=mysql://db:db@db/db -y
+  vendor/bin/drush user-add-role 'administrator' admin
+  yes 2>/dev/null |vendor/bin/drush cset system.site uuid $(head -n 1 .settings/salt.txt)
+  vendor/bin/drush cr
+  vendor/bin/drush genc --bundles=article 10
 fi
