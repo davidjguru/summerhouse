@@ -79,6 +79,9 @@
     "scripts": {
         "post-install-cmd": [
             "sh ./scripts/composer/post-install.sh"
+        ],
+        "prepare": [
+            "sh ./scripts/composer/prepare.sh"
         ]
     },
     "extra": {
