@@ -25,18 +25,27 @@ VENDOR=false CONTRIB=false INSTALLED=false
 if [ -d "$DIRECTORY_1" ] && [ ! -z "$(ls -A "$DIRECTORY_1")" ] 
   then
     VENDOR=true
+    echo "The /vendor folder is available in your system and it was populated."
+else
+  echo "The /vendor folder is not available in your system."
 fi
 
 # Check if the /modules/contrib exists and it's populated. 
 if [ -d "$DIRECTORY_2" ] && [ ! -z "$(ls -A "$DIRECTORY_2")" ] 
   then
     CONTRIB=true
+    echo "The /modules/contrib/ folder is available in your system and it was populated."
+else 
+  echo "The /modules/contrib/ folder is not available in your system."
 fi
 
 # Check if the Drupal installation was enabled previously.
-if [ "$(vendor/bin/drush status bootstrap)" == "Drupal bootstrap : Successful " ]
+if [ ! -z "$(vendor/bin/drush status bootstrap)" ]
   then
     INSTALLED=true
+    echo "Summer House was already installed and enabled in your local environment."
+else 
+  echo "Summer House was not installed and enabled in your local environment."
 fi
 
 # Finally check every possible scenario.
