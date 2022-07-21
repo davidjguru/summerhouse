@@ -86,7 +86,7 @@ Summer House will deploy a series of containers from an internal network connect
 Some common problems have been identified. Check this section for quick interventions.  
 For more extended information on known bugs and their solutions, [visit the related wiki section](https://github.com/davidjguru/summerhouse/wiki/Troubleshooting).  
 
-#### Free some ports
+#### Some ports unavailable
 A fundamental aspect of deploying Summer House in your local environment (Linux, WSL) is the use of ports. Problems have been detected due to port blocking by other applications. This can cause DDEV start-up problems and lead to others problems during the installation process of the main website, you can get errors just like:  
 ```
 [error]  Drupal\Core\Config\ConfigImporterException: There were errors validating the config synchronization.
@@ -95,8 +95,27 @@ Entities exist of type <em class="placeholder">Shortcut link</em> and <em class=
 
 DDEV operates with ports used by other resources, such as 80 or 443. Check that they are not in use (you do not have Apache running on your system).  
 
+#### Error messages accessing external resources
+Summer House obtains a lot of resources through the Internet in order to get its own download, installation, configuration and other resources. From the first `git clone` command to the latest `composer install` execution, you will get a lot of stuff from external sources. For instance, the Portainer container is built from a docker-compose.yml file retrieved from an external repository in Github, by doing:  
+```
+wget https://raw.githubusercontent.com/drud/ddev-contrib/master/docker-compose-services/portainer/docker-compose.portainer.yaml 
+```
+
+So sometimes you can get errors when trying to get external resources:  
+
+```
+A MkDocs service file has been located in your system.
+fatal: unable to access 'https://github.com/davidjguru/summerhouse.wiki.git/': Could not resolve host: github.com
+Task failed: Exec command '([ -d ./mkdocs/docs ] && cd ./mkdocs/docs && git pull origin) || (git clone https://github.com/davidjguru/summerhouse.wiki.git ./mkdocs/docs)'
+```
+(We're building up the mkdocs container from a git clone of the repository wiki).
+
+This is the key: `Could not resolve host: github.com`, As Summer House makes intensive use of Internet connections, you need to check in these cases your assigned DNS servers (or those of your ISP), to ensure that they are functioning normally. These are not problems specific to Summer House, but they are problems with your Internet connectivity.
+
 **Remember**, more information on how to deal with more specific errors can be found here:  
 [summerhouse/wiki/troubleshooting](https://github.com/davidjguru/summerhouse/wiki/Troubleshooting).  
+
+
 ### 6. Useful Links 
 
 * See the Issue Queue: [summerhouse/issues](https://github.com/davidjguru/summerhouse/issues)  
