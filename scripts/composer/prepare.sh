@@ -19,7 +19,8 @@
 # Set initial values for folders and variables.
 DIRECTORY_1=vendor
 DIRECTORY_2=backend_drupal/modules/contrib
-VENDOR=false CONTRIB=false INSTALLED=false
+BIN=vendor/bin/drush
+VENDOR=false CONTRIB=false INSTALLED=true
 
 # Check if the /vendor folder exists and it's populated.
 if [ -d "$DIRECTORY_1" ] && [ ! -z "$(ls -A "$DIRECTORY_1")" ] 
@@ -40,12 +41,13 @@ else
 fi
 
 # Check if the Drupal installation was enabled previously.
-if [ ! -z "$(vendor/bin/drush status bootstrap)" ]
+if [ "$VENDOR" = false ] || [ ! -e "$BIN" ] || [ -z "$(vendor/bin/drush status bootstrap)" ]
   then
-    INSTALLED=true
-    echo "Summer House was already installed and enabled in your local environment."
+    INSTALLED=false
+    echo "Summer House was not installed in your local environment."
+    echo $DIRECTORY_3
 else 
-  echo "Summer House was not installed and enabled in your local environment."
+  echo "Summer House was already installed in your local environment."
 fi
 
 # Finally check every possible scenario.
@@ -64,7 +66,7 @@ elif [ "$VENDOR" = true ] && [ "$CONTRIB" = true ] && [ "$INSTALLED" = false ]
     vendor/bin/drush genc --bundles=article 10
 else
   ## Third: First time Installation running ddev start.
-  echo "Folders for /modules/contrib and /vendor doesn't exists and your Drupal installation is not enabled, composer install and drush will be executed."
+  echo "Folders for /modules/contrib and /vendor doesn't exist and your Drupal installation is not enabled, composer install and drush will be executed."
   composer install 
   vendor/bin/drush site-install --existing-config --site-name=SummerHouse --account-name=admin --account-pass=admin --db-url=mysql://db:db@db/db -y
   vendor/bin/drush user-add-role 'administrator' admin
