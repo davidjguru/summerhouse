@@ -31,7 +31,7 @@ hooks:
     # Resolve all dependencies by Composer in container.
     - composer: prepare
     # Generate an one-time login for admin and open Drupal in browser.
-    - exec-host: "xdg-open $(ddev drush uli admin)" 
+    - exec-host: xdg-open "$(ddev drush uli admin)"
     # Launch React frontend in browser.
     - exec-host: "xdg-open http://summerhouse.ddev.site:3000/"
     # Launch MkDocs frontend in browser.
