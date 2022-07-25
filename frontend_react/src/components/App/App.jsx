@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from '../Header/Header';
 import ChapterList from '../Chapter/ChapterList';
-import summer_house_logo from '../../assets/summer_house_logo_512.png';
 import '../../styles/App.css';
 import Branding from '../Branding/Branding';
 
