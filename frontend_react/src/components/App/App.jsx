@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../Header/Header';
-import ArticleList from '../Article/ArticleList';
+import ChapterList from '../Chapter/ChapterList';
 import summer_house_logo from '../../assets/summer_house_logo_512.png';
 import '../../styles/App.css';
 import Branding from '../Branding/Branding';
@@ -16,7 +16,7 @@ function App() {
         <a className="App-link" href="http://summerhouse.ddev.site:8091/Home/" target="_blank" rel="noopener noreferrer">Learn more about Summer House</a>
         <br></br><hr></hr>
         <br></br>
-        <ArticleList />
+        <ChapterList />
     </div>
   );
 }
