@@ -3,6 +3,7 @@ import Header from '../Header/Header';
 import ChapterList from '../Chapter/ChapterList';
 import '../../styles/App.css';
 import Branding from '../Branding/Branding';
+import GridTable from '../GridTable/GridTable';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <br></br><hr></hr>
         <br></br>
         <ChapterList />
+        <GridTable />
     </div>
   );
 }
