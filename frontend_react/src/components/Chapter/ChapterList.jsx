@@ -1,5 +1,5 @@
 import React from 'react';
-import Chapter from './Chapter';
+import { ChapterItem } from './ChapterItem';
 import { useQuery, gql } from '@apollo/client';
 
 const MyQuery = gql`
@@ -15,20 +15,19 @@ const MyQuery = gql`
   }
 `;
 
-const ChapterList = () => {
+export function ChapterList() {
+
   const { data } = useQuery(MyQuery);
-
   return (
-    <div>
-      {data && (
-        <>
+      <ul>
+        {data && (
+          <>
           {data.articles.items.map((chapter) => (
-            <Chapter key={chapter.id} chapter={chapter} />
+            <ChapterItem key={chapter.id} id={chapter.id} title={chapter.title} />
           ))}
-        </>
-      )}
-    </div>
-  );
-};
+          </>
+        )}
+      </ul>
 
-export default ChapterList;
+  );
+}
