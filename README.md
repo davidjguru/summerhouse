@@ -87,7 +87,7 @@ Some common problems have been identified. Check this section for quick interven
 For more extended information on known bugs and their solutions, [visit the related wiki section](https://github.com/davidjguru/summerhouse/wiki/Troubleshooting).  
 
 #### Some ports unavailable
-A fundamental aspect of deploying Summer House in your local environment (Linux, WSL) is the use of ports. Problems have been detected due to port blocking by other applications. This can cause DDEV start-up problems and lead to others problems during the installation process of the main website, you can get errors just like:  
+Problems have been detected due to port blocking by other applications. This can cause DDEV start-up problems and lead to others problems during the installation process of the main website, you can get errors just like:  
 ```
 [error]  Drupal\Core\Config\ConfigImporterException: There were errors validating the config synchronization.
 Entities exist of type <em class="placeholder">Shortcut link</em> and <em class="placeholder">Shortcut set</em> <em class="placeholder">Default</em>. These entities need to be deleted before importing. in Drupal\Core\Config\ConfigImporter->validate() (line 750 of /var/www/html/backend_drupal/core/lib/Drupal/Core/Config/ConfigImporter.php).
@@ -96,12 +96,7 @@ Entities exist of type <em class="placeholder">Shortcut link</em> and <em class=
 DDEV operates with ports used by other resources, such as 80 or 443. Check that they are not in use (you do not have Apache running on your system).  
 
 #### Error messages accessing external resources
-Summer House obtains a lot of resources through the Internet in order to get its own download, installation, configuration and other resources. From the first `git clone` command to the latest `composer install` execution, you will get a lot of stuff from external sources. For instance, the Portainer container is built from a docker-compose.yml file retrieved from an external repository in Github, by doing:  
-```
-wget https://raw.githubusercontent.com/drud/ddev-contrib/master/docker-compose-services/portainer/docker-compose.portainer.yaml 
-```
-
-So sometimes you can get errors when trying to get external resources:  
+Summer House obtains a lot of resources through the Internet, so sometimes you can get errors when trying to get external resources:  
 
 ```
 A MkDocs service file has been located in your system.
@@ -110,7 +105,23 @@ Task failed: Exec command '([ -d ./mkdocs/docs ] && cd ./mkdocs/docs && git pull
 ```
 (We're building up the mkdocs container from a git clone of the repository wiki).
 
-This is the key: `Could not resolve host: github.com`, As Summer House makes intensive use of Internet connections, you need to check in these cases your assigned DNS servers (or those of your ISP), to ensure that they are functioning normally. These are not problems specific to Summer House, but they are problems with your Internet connectivity.
+This is the key: `Could not resolve host: github.com`. You need to check in these cases your assigned DNS servers (or those of your ISP), to ensure that they are functioning normally. 
+
+#### Some errors from commands in macOS 
+
+When you're installing Summer House in macOS, some people have reported errors in prompt from some commands execution. Specifically, errors derived from some commands used in the installation process not available in macOS, for instance: 
+
+```
+bash: xdg-open: command not found
+```
+The equivalent command in macOS would be just `open`, so you can try to change this command in `.ddev/config.yaml', lines [34](https://github.com/davidjguru/summerhouse/blob/9cc927ee0cacd03ec174c4cfbfe8756544014808/.ddev/config.yaml#L34) to [38](https://github.com/davidjguru/summerhouse/blob/9cc927ee0cacd03ec174c4cfbfe8756544014808/.ddev/config.yaml#L38).  
+
+And: 
+```
+Task failed: Exec command 'sed -i '12s/restart: "no"/restart: "on-failure"/' ./.ddev/docker-compose.portainer.yaml' on the host: exit status 1
+```
+...When we're altering the restarting policies for the Portainer Container by using the `sed` command.  
+
 
 **Remember**, more information on how to deal with more specific errors can be found here:  
 [summerhouse/wiki/troubleshooting](https://github.com/davidjguru/summerhouse/wiki/Troubleshooting).  
