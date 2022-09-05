@@ -27,8 +27,8 @@ You can use SummerHouse in Linux environments and specifically in Debian / Ubunt
 Just download the script in your system, give it permissions and execute the installer. This will install Docker, Docker-Compose and DDEV in your Linux system (Ubuntu, Debian). Also it will install some basic resources like git, jq, curl and basic packages.  
 
 ```bash
-$ chmod +x installing_docker_dockercompose_ddev
-$ ./installing_docker_dockercompose_ddev
+$ chmod +x installing_docker_dockercompose_ddev.sh
+$ ./installing_docker_dockercompose_ddev.sh
 ``` 
 **Note:** If you consider that delegate the prerequisites to a script is insecure or may put your environment at risk, here is some information so you can do it by yourself:
 * [How to Install Docker](https://www.digitalocean.com/community/tutorial_collections/how-to-install-and-use-docker)  
