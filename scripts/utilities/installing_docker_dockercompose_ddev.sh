@@ -4,7 +4,7 @@
 #
 #-----------------------------------------------------------------------------------------
 # 
-# Install Docker, Docker-Compose and DDEV in Ubuntu.
+# Install Docker and DDEV in Ubuntu.
 # [David Rodríguez, @davidjguru] [david.rodriguez@digitalistgroup.com]
 # Title: installing_docker_dockercompose_ddev
 # Description: Install the last available versions for Docker, Docker-Compose and DDEV. 
@@ -66,14 +66,6 @@ then
   echo -e "   \e[1;4;31mWe're running a Docker initial testing - hello world -> \e[0m"
   docker run hello-world
 
-  # Install Docker Compose.
-  echo -e "   \e[1;4;31mInstalling Docker Compose:    \e[0m"
-  sudo apt install -y docker-compose
-
-  # Check if Docker Compose was installed and gets the current version.
-  echo -e "   \e[1;4;31mDocker Compose has been installed in your system: \e[0m"
-  docker-compose --version
-
   # Check if DDEV was installed by brew or not updating brew and previous versions of DDEV.
   if [[ $(which brew) ]]; then
     echo -e "   \e[1;4;31mThere was detected a version of Brew installed in your sistem. \e[0m"
@@ -85,13 +77,9 @@ then
     echo -e "   \e[1;4;31mDDEV was upgraded in your system: \e[0m"
     ddev version
   else
-    echo -e "   \e[1;4;31mThere wasn't detected a version of Brew installed in your sistem. \e[0m"
-    # Download and executes the DDEV basic installation script.
-    echo -e "   \e[1;4;31mProcessing the DDEV basic installation script...\e[0m"
-    curl -L https://raw.githubusercontent.com/drud/ddev/master/scripts/install_ddev.sh | bash
-    # Check if DDEV is available now in your system.
-    echo -e "   \e[1;4;31mDDEV was installed in your system: \e[0m"
-    ddev version
+    curl https://apt.fury.io/drud/gpg.key | sudo apt-key add -
+    echo "deb https://apt.fury.io/drud/ * *" | sudo tee -a /etc/apt/sources.list.d/ddev.list
+    sudo apt update && sudo apt install -y ddev
   fi
 else
   echo "The execution of the script will be stopped. Bye!";
