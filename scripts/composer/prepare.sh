@@ -4,9 +4,9 @@
 #
 #-----------------------------------------------------------------------------------------
 # 
-# Review Summer House local installation to request an instal lprocess or not.
+# Review Summer House local installation to request an install process or not.
 # [David Rodríguez, @davidjguru] [david.rodriguez@digitalistgroup.com]
-# Title: prepare
+# Title: Prepare
 # Description: Check if the Summer House platforma was installed previously. 
 #
 # davidjguru@gmail.com
