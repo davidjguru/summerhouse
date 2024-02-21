@@ -36,7 +36,7 @@ $ ./installing_docker_dockercompose_ddev
 * [How to Install DDEV](https://www.digitalocean.com/community/tutorials/how-to-develop-a-drupal-9-website-on-your-local-machine-using-docker-and-ddev#option-2-mdash-installing-ddev-on-linux)  
 
 ### 3. Install // Uninstall
-#### Installating and deploy  
+#### Installation and run  
 You can install Summer House in just three steps, just by doing:  
 
 ```bash
@@ -44,7 +44,7 @@ $ git clone https://github.com/davidjguru/summerhouse.git #Get a local copy.
 $ cd summerhouse #Move to the folder.
 summerhouse$ ddev start #Run the DDEV build up.
 ```
-And the project will be loaded, configured, enabled and deployed in your local environment. You will see the main URLs opening in your browser.  
+And the project will be loaded, configured, enabled and it will run in your local environment. You will see the main URLs opening in your browser.  
 Please, **remember:** Summer House is **only** for local development. It can contain some configs that can be unsecure in other environments.  
 
 You can also download the project from [the releases / tags area of the Github repository](https://github.com/davidjguru/summerhouse/releases), selecting the version and downloading the compressed folder. Then you only have to unpack the project and launch DDEV:  
@@ -57,7 +57,7 @@ summerhouse-1.0.0$ ddev start
 ```
 And the platform will be mounted and deployed.  
 
-#### Uninstalling and clean up
+#### Uninstall and clean up
 
 In order to execute a complete cleaning of your Summer House installation you can do the next steps.  
 
