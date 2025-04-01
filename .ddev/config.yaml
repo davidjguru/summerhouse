@@ -36,6 +36,8 @@ hooks:
     - exec-host: "xdg-open http://summerhouse.ddev.site:3000/"
     # Launch MkDocs frontend in browser.
     - exec-host: "xdg-open http://summerhouse.ddev.site:8091/Home/"
+    #Launch Portainer initial view in browser.
+    - exec-host: "xdg-open http://summerhouse.ddev.site:9100"
     # Enable debugging by-default
     - exec-host: "ddev xdebug on"
   pre-stop:
