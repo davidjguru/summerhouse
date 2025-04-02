@@ -52,13 +52,14 @@
         "cweagans/composer-patches": "^1.7",
         "d3/d3": "^3.5",
         "drupal/admin_toolbar": "^3.1",
-        "drupal/core-composer-scaffold": "^9.3",
-        "drupal/core-project-message": "^9.3",
-        "drupal/core-recommended": "^9.3",
-        "drupal/devel": "^4.1",
+        "drupal/core-composer-scaffold": "^10.5",
+        "drupal/core-project-message": "^10.5",
+        "drupal/core-recommended": "^10.5",
+        "drupal/devel": "^5.1",
         "drupal/graphql": "^4.3",
-        "drush/drush": "^11.0",
-        "highlightjs/highlightjs": "^11.2"
+        "drush/drush": "^12.0",
+        "highlightjs/highlightjs": "^11.2",
+        "symfony/var-dumper": "^6.4.15"
     },
     "conflict": {
         "drupal/drupal": "*"
